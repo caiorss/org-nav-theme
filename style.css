@@ -66,6 +66,7 @@ a {
     overflow-y: scroll;
     display: block;
 }
+  
 
 #table-of-contents ul {
     padding-left: 0px;
@@ -103,6 +104,13 @@ a {
     /* overflow-x:       scroll; */
     background-color: rgba(255,255,255,1.0);
     z-index:          9999;
+}
+
+p {
+    float:            right;
+    /* position:         relative; */
+    width:            var(--main-width);
+    padding-left:     35%;
 }
 
 .creator {
