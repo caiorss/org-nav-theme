@@ -82,6 +82,19 @@ a {
 
 
 
+/* ======== Table ================================== */
+
+table {
+	border-collapse:collapse;
+	border-spacing:0
+}
+
+td,th {
+	padding:0
+}
+
+
+/* ======= Code block style ======================= */
 
 
 /* ======== Syntax Highlight ======================= */
