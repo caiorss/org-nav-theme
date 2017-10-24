@@ -16,9 +16,14 @@
 
 
 body {
-    font: 16px/1.385 arial,helvetica,clean,sans-serif;
+    font:           16px/1.385 arial,helvetica,clean,sans-serif;
+    text-rendering: optimizeLegibility;
 }
 
+
+h1 {
+    text-align: center;
+}
 
 h1, ul#tabs, h2, h3, h4, h5 {
     font-family: "Trebuchet MS",Verdana,sans-serif;
@@ -47,6 +52,9 @@ a {
 
 #table-of-contents {
     /* background-color: rgba(229,229,229,1.0); */
+    border-color: #CCCCCC #BBBBBB #888888;
+    /* background-image: linear-gradient(to bottom, #7b0105 0%, #b8282c 100%); */
+    
     color: var(--header-color);    
     width: var(--toc-width);
     height: 100%;
@@ -56,7 +64,6 @@ a {
     bottom: 0;
     /* background-color: rgba(125, 125, 125, 0.29); */
     overflow-y: scroll;
-    font-size: 10pt; /* /1.385 arial,helvetica,clean,sans-serif; */
     display: block;
 }
 
@@ -71,41 +78,47 @@ a {
 #table-of-contents li {
     padding-left: 10px;
     padding-top:  15px;
+    font-size: 10pt; 
 }
 
 #table-of-contents  a {
-    color:          rgba(0,0,0,1);
+    /* color:          rgba(0,0,0,1); */
     font-weight:    700;
+    color:          #364149;
+    position:       relative;
+    text-overflow:  ellipsis;
 }
 
 #table-of-contents a:hover {
-    color: rgba(51,102,204,1.0);
-    text-decoration: underline;
+    color:            rgba(51,102,204,1.0);
+    text-decoration:  underline;
 }
 
 .outline-2 {
     /* margin-left:  50%; */
-    float:        right;
-    width:        var(--main-width);
-    padding-left: 35%;
-    overflow-x: scroll;
-    display: block;
+    float:            right;
+    /* position:         relative; */
+    width:            var(--main-width);
+    padding-left:     35%;
+    /* overflow-x:       scroll; */
+    background-color: rgba(255,255,255,1.0);
+    z-index:          9999;
 }
 
 .creator {
     /* margin-left:  50%; */
-    float:        right;
-    width:        var(--main-width);
-    padding-left: 35%;
-    overflow-x: scroll;
+    float:         right;
+    width:         var(--main-width);
+    padding-left:  35%;
+    overflow-x:    scroll;
 }
 
 #postamble {
     /* margin-left:  50%; */
-    float:        right;
-    width:        var(--main-width);
-    padding-left: 35%;
-    overflow-x: scroll;
+    float:         right;
+    width:         var(--main-width);
+    padding-left:  35%;
+    overflow-x:    scroll;
 }
 
 
@@ -113,8 +126,8 @@ a {
 /* ======== Table ================================== */
 
 table {
-	border-collapse:collapse;
-	border-spacing:0
+	border-collapse:  collapse;
+	border-spacing:   0;
 }
 
 td,th {
