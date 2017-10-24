@@ -1,0 +1,90 @@
+
+/** Variables */
+
+:root {
+
+    /** Table of contents settings */
+    --toc-width:   25%;        
+    --toc-bgcolor:  lightcyan;
+
+    
+    /** Content lenght */
+    --main-width: 70%;
+}
+
+
+
+#table-of-contents {
+    /* background-color: blue; */
+    color: red;
+    width: var(--toc-width);
+    height: 100%;
+    float: left;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(125, 125, 125, 0.29);
+    overflow-y: scroll;
+}
+
+.outline-2 {
+    /* margin-left:  50%; */
+    float:        right;
+    width:        var(--main-width);
+    padding-left: 35%;
+    overflow-x: scroll;
+}
+
+.creator {
+    /* margin-left:  50%; */
+    float:        right;
+    width:        var(--main-width);
+    padding-left: 35%;
+    overflow-x: scroll;
+}
+
+#postamble {
+    /* margin-left:  50%; */
+    float:        right;
+    width:        var(--main-width);
+    padding-left: 35%;
+    overflow-x: scroll;
+}
+
+
+
+
+
+/* ======== Syntax Highlight ======================= */
+
+
+pre span.org-builtin                     {color:#006FE0;font-weight:bold;}
+pre span.org-string                      {color:#008000;}
+pre span.org-keyword                     {color:#0000FF;}
+pre span.org-variable-name               {color:#BA36A5;}
+pre span.org-function-name               {color:#006699;}
+pre span.org-type                        {color:#6434A3;}
+pre span.org-preprocessor                {color:#808080;font-weight:bold;}
+pre span.org-constant                    {color:#D0372D;}
+pre span.org-comment-delimiter           {color:#8D8D84;}
+pre span.org-comment                     {color:darkgreen;font-style:italic}
+pre span.org-outshine-level-1            {color:#8D8D84;font-style:italic}
+pre span.org-outshine-level-2            {color:#8D8D84;font-style:italic}
+pre span.org-outshine-level-3            {color:#8D8D84;font-style:italic}
+pre span.org-outshine-level-4            {color:#8D8D84;font-style:italic}
+pre span.org-outshine-level-5            {color:#8D8D84;font-style:italic}
+pre span.org-outshine-level-6            {color:#8D8D84;font-style:italic}
+pre span.org-outshine-level-7            {color:#8D8D84;font-style:italic}
+pre span.org-outshine-level-8            {color:#8D8D84;font-style:italic}
+pre span.org-outshine-level-9            {color:#8D8D84;font-style:italic}
+pre span.org-rainbow-delimiters-depth-1  {color:#707183;}
+pre span.org-rainbow-delimiters-depth-2  {color:#7388d6;}
+pre span.org-rainbow-delimiters-depth-3  {color:#909183;}
+pre span.org-rainbow-delimiters-depth-4  {color:#709870;}
+pre span.org-rainbow-delimiters-depth-5  {color:#907373;}
+pre span.org-rainbow-delimiters-depth-6  {color:#6276ba;}
+pre span.org-rainbow-delimiters-depth-7  {color:#858580;}
+pre span.org-rainbow-delimiters-depth-8  {color:#80a880;}
+pre span.org-rainbow-delimiters-depth-9  {color:#887070;}
+pre span.org-sh-quoted-exec              {color:#FF1493;}
+

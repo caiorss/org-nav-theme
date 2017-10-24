@@ -1,0 +1,259 @@
+
+
+body {
+    font: 16px/1.385 arial,helvetica,clean,sans-serif;
+}
+
+/* #content { */
+/*     clear: both; */
+/*     background-color: #FFFFFF; */
+/*     font-size: 100%; */
+/*     margin: 0 auto; */
+/*     max-width:  90%; /\* 810px; *\/ */
+/*     overflow-x: hidden; */
+/*     overflow-y: auto; */
+/*     padding: 0px 10px 2px 10px; */
+/* } */
+
+/* ==========  Headings ====================== */
+
+h1, ul#tabs, h2, h3, h4, h5 {
+    font-family: "Trebuchet MS",Verdana,sans-serif;
+}
+
+h2 {
+    border-bottom: 4px solid #67B3E3;
+    color: #13679D;
+    font-size: 20px;
+}
+
+h3, h4, h5, h6 {
+    color: #1572AE;
+}
+
+
+/*============ Code block ===========*/
+
+/* pre { */
+/*     background-color: white; */
+/*     padding: 8px 0; */
+/*     padding-left: 12px; */
+/*     border-top: 2px solid #eee; */
+/*     border-bottom: 2px solid #eee; */
+/* } */
+
+/* pre, code { */
+/*     font-family: 'Source Code Pro', monospace; */
+/* } */
+
+/* pre { */
+/*     background: url("../images/note.png") repeat scroll right bottom transparent; */
+/*     border-bottom: 0px solid #BFBFBF !important; */
+/*     border-left: 1px solid #BFBFBF; */
+/*     border-right: 0px solid #BFBFBF !important; */
+/*     border-top: 1px solid #BFBFBF; */
+/*     color: blue; */
+/*     font-family: monospace; */
+/*     font-size: 0.93em; */
+/*     line-height: 1.13em; */
+/*     margin: 0px 0px 24px 0px; */
+/*     padding: 6px; */
+/* } */
+
+code {
+    background-color: #F8F8FF;
+    border: 1px solid #DEDEDE;
+    color: #444444;
+    font-family: monospace;
+    font-size: 0.93em;
+    margin: 0px 1px;
+    padding: 0px 2px;
+}
+
+/* pre { */
+/*     display: block; */
+/*     padding: 9.5px; */
+/*     margin: 0 0 10px; */
+/*     font-size: 13px; */
+/*     line-height: 20px; */
+/*     word-break: break-all; */
+/*     word-wrap: break-word; */
+/*     white-space: pre; */
+/*     white-space: pre-wrap; */
+/*     background-color: #f5f5f5; */
+/*     border: 1px solid #ccc; */
+/*     border: 1px solid rgba(0, 0, 0, 0.15); */
+/*     -webkit-border-radius: 4px; */
+/*     -moz-border-radius: 4px; */
+/*     border-radius: 4px; */
+/* } */
+
+
+/* pre { */
+/*     white-space: pre; */
+/*     margin: 0; */
+/*     padding: 12px 12px; */
+/*     font-family: Consolas,"Andale Mono WT","Andale Mono","Lucida Console","Lucida Sans Typewriter","DejaVu Sans Mono","Bitstream Vera Sans Mono","Liberation Mono","Nimbus Mono L",Monaco,"Courier New",Courier,monospace; */
+/*     font-size: 12px; */
+/*     line-height: 1.5; */
+/*     display: block; */
+/*     overflow: auto; */
+/*     color: #404040; */
+/* } */
+
+
+/* pre { */
+/*     display: block; */
+/*     padding: 9.5px; */
+/*     margin: 0 0 10px; */
+/*     font-size: 13px; */
+/*     line-height: 1.428571429; */
+/*     color: #333; */
+/*     word-break: break-all; */
+/*     word-wrap: break-word; */
+/*     background-color: #f5f5f5; */
+/*     border: 1px solid #ccc; */
+/*     border-radius: 4px; */
+/* } */
+
+
+
+
+pre {
+    font-family: monospace,monospace;
+    font-size: 10pt;
+    
+    
+	/* background-color:#292929; */
+    background:#fff;
+    
+	/* color:#fff; */
+    color:#555;
+	padding:2em 28px;
+	margin:0;
+	width:95%;
+	/* float:right; */
+	/* clear:right; */
+    line-height: 25.6px;
+    border-radius: 16px;
+	box-sizing:border-box;
+	/* text-shadow:0px 1px 2px rgba(0,0,0,0.4) */
+}
+
+
+/* pre { */
+/*     overflow: auto; */
+/*     padding: 16px; */
+/*     margin: 10px 0 19px; */
+/*     line-height: 1.5; */
+/*     direction: ltr; */
+/*     text-align: left; */
+/*     white-space: pre; */
+/*     word-spacing: normal; */
+/*     word-break: normal; */
+/*     word-wrap: normal; */
+/*     -moz-tab-size: 4; */
+/*     -o-tab-size: 4; */
+/*     tab-size: 4; */
+/*     -webkit-hyphens: none; */
+/*     -ms-hyphens: none; */
+/*     hyphens: none; */
+/*     -webkit-overflow-scrolling: touch; */
+/* } */
+
+
+
+/* div.toc { */
+/*     padding: 14px 25px; */
+/*     background-color: #F7F7F7; */
+/*     border: 1px solid #E3E3E3; */
+/*     border-radius: 7px 7px 7px 7px; */
+/*     float: right; */
+/*     height: auto; */
+/*     margin: 0 8px 10px 10px; */
+/*     width: 200px; */
+/* } */
+
+
+
+/* ======== Hyperlinks ============ */
+
+/* a, a.el, a.elRef, a.el:visited, a.elRef:visited { */
+/*     color: #0050A0; */
+/* } */
+/* a.el { */
+/*     font-weight: bold; */
+/* } */
+/* a { */
+/*     color: #646464; */
+/*     font-weight: normal; */
+/*     text-decoration: none; */
+/* } */
+
+
+a {
+    color: #007bb8;
+    cursor: pointer;
+    text-decoration: none;
+    -webkit-transition: none 86ms ease-out;
+    transition: none 86ms ease-out;
+}
+a {
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+
+
+/* ======== Table ================================== */
+
+table {
+	border-collapse:collapse;
+	border-spacing:0
+}
+
+td,th {
+	padding:0
+}
+
+/* ======== Syntax Highlight ======================= */
+
+
+pre span.org-builtin                     {color:#006FE0;font-weight:bold;}
+pre span.org-string                      {color:#008000;}
+pre span.org-keyword                     {color:#0000FF;}
+pre span.org-variable-name               {color:#BA36A5;}
+pre span.org-function-name               {color:#006699;}
+pre span.org-type                        {color:#6434A3;}
+pre span.org-preprocessor                {color:#808080;font-weight:bold;}
+pre span.org-constant                    {color:#D0372D;}
+pre span.org-comment-delimiter           {color:#8D8D84;}
+pre span.org-comment                     {color:darkgreen;font-style:italic}
+pre span.org-outshine-level-1            {color:#8D8D84;font-style:italic}
+pre span.org-outshine-level-2            {color:#8D8D84;font-style:italic}
+pre span.org-outshine-level-3            {color:#8D8D84;font-style:italic}
+pre span.org-outshine-level-4            {color:#8D8D84;font-style:italic}
+pre span.org-outshine-level-5            {color:#8D8D84;font-style:italic}
+pre span.org-outshine-level-6            {color:#8D8D84;font-style:italic}
+pre span.org-outshine-level-7            {color:#8D8D84;font-style:italic}
+pre span.org-outshine-level-8            {color:#8D8D84;font-style:italic}
+pre span.org-outshine-level-9            {color:#8D8D84;font-style:italic}
+pre span.org-rainbow-delimiters-depth-1  {color:#707183;}
+pre span.org-rainbow-delimiters-depth-2  {color:#7388d6;}
+pre span.org-rainbow-delimiters-depth-3  {color:#909183;}
+pre span.org-rainbow-delimiters-depth-4  {color:#709870;}
+pre span.org-rainbow-delimiters-depth-5  {color:#907373;}
+pre span.org-rainbow-delimiters-depth-6  {color:#6276ba;}
+pre span.org-rainbow-delimiters-depth-7  {color:#858580;}
+pre span.org-rainbow-delimiters-depth-8  {color:#80a880;}
+pre span.org-rainbow-delimiters-depth-9  {color:#887070;}
+pre span.org-sh-quoted-exec              {color:#FF1493;}
+
+
+
+
+/* .src { */
+/*     -moz-border-radius-topright: 10px; */
+/*     background-color: #7FBAE2; */
+/*     margin-top: 0.7em; */
+/* } */
+
