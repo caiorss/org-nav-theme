@@ -13,6 +13,35 @@
 }
 
 
+body {
+    font: 16px/1.385 arial,helvetica,clean,sans-serif;
+}
+
+
+h1, ul#tabs, h2, h3, h4, h5 {
+    font-family: "Trebuchet MS",Verdana,sans-serif;
+}
+
+h3, h4, h5, h6 {
+    color: #1572AE;
+}
+
+
+/** Hyperlink General Styles */
+a {
+    color: #007bb8;
+    cursor: pointer;
+    text-decoration: none;
+    -webkit-transition: none 86ms ease-out;
+    transition: none 86ms ease-out;
+}
+
+a {
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+
+
 
 #table-of-contents {
     /* background-color: blue; */
