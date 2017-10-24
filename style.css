@@ -135,10 +135,22 @@ img{
 table {
 	border-collapse:  collapse;
 	border-spacing:   0;
+    width: 80%;
+}
+
+th {
+    font-weight: bold;
+    background-color: #cccccc;
+    /* text-align: justified; */
+}
+
+th.left {
+    text-align: left;
 }
 
 td,th {
-	padding:0
+	padding: 0;
+    /* width: 100%; */
 }
 
 /**========= Blockquote and citations ============ */
