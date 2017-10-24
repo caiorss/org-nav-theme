@@ -56,6 +56,13 @@ a {
     overflow-y: scroll;
 }
 
+#table-of-contents ul {
+    padding-left: 15px;
+    padding-top:  15px;
+    list-style-type: none;
+}
+
+
 .outline-2 {
     /* margin-left:  50%; */
     float:        right;
