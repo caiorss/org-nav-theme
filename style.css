@@ -146,21 +146,22 @@ blockquote {
 
     /* margin: 1.5em 10px; */
     padding: 0.25em 40px;
+    width: 80%;
 
     /* padding: 0.5em 10px; */
     quotes: "\201C""\201D""\2018""\2019";
 }
 
 blockquote:before {
-  color: #ccc;
-  content: open-quote;
-  font-size: 4em;
-  line-height: 0.1em;
-  margin-right: 0.25em;
+  color:           #ccc;
+  content:         open-quote;
+  font-size:       4em;
+  line-height:     0.1em;
+  margin-right:    0.25em;
   vertical-align: -0.4em;
 }
-b
-lockquote p {
+
+blockquote p {
   display: inline;
 }
 
