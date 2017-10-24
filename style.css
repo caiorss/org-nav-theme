@@ -106,12 +106,12 @@ a {
     z-index:          9999;
 }
 
-p {
-    float:            right;
-    /* position:         relative; */
-    width:            var(--main-width);
-    padding-left:     35%;
-}
+/* p { */
+/*     float:            right; */
+/*     /\* position:         relative; *\/ */
+/*     width:            var(--main-width); */
+/*     padding-left:     35%; */
+/* } */
 
 .creator {
     /* margin-left:  50%; */
