@@ -81,7 +81,7 @@ body {
     overflow-y: scroll;
     display: block;
 }
-  
+
 
 #table-of-contents ul {
     padding-left: 0px;
@@ -94,7 +94,7 @@ body {
 #table-of-contents li {
     padding-left: 10px;
     padding-top:  15px;
-    font-size: 10pt; 
+    font-size: 10pt;
 }
 
 #table-of-contents  a {
@@ -169,11 +169,15 @@ blockquote p {
 
 
 pre {
-    font-family: monospace,monospace;
+    font-family: "Operator Mono SSm A", "Operator Mono SSm B", 'Source Code Pro', Menlo, Consolas, Monaco, monospace;
+    /* font-family: monospace,monospace; */
     font-size: 10pt;
 
 	/* background-color:#292929; */
-    background:#fff;
+    /* background:#fff; */
+
+    background: #e1e9ef;
+    display: block;
 
 	/* color:#fff; */
     /* color:#555; */
@@ -184,8 +188,11 @@ pre {
 	/* clear:right; */
     line-height: 25.6px;
     border-radius: 16px;
+    border: 1px solid #777;
 	box-sizing:border-box;
 	/* text-shadow:0px 1px 2px rgba(0,0,0,0.4) */
+
+    overflow-x: scroll;
 }
 
 
