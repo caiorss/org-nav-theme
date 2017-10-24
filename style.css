@@ -12,6 +12,9 @@
     --main-width: 70%;
 
     --header-color:  #1572AE;
+
+
+    --max-image-width: 600px;
 }
 
 
@@ -130,6 +133,13 @@ a {
 }
 
 
+
+/* ======== Image ================================== */
+
+img{
+    width:     100%;
+    max-width: var(--max-image-width);
+}
 
 /* ======== Table ================================== */
 
