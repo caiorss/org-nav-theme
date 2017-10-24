@@ -62,6 +62,15 @@ a {
     list-style-type: none;
 }
 
+#table-of-contents  a {
+    color:          rgba(0,0,0,1);
+    font-weight:    700;
+}
+
+#table-of-contents a:hover {
+    color: rgba(51,102,204,1.0);
+    text-decoration: underline;
+}
 
 .outline-2 {
     /* margin-left:  50%; */
