@@ -44,16 +44,18 @@ a {
 
 
 #table-of-contents {
-    /* background-color: blue; */
-    color: red;
+    /* background-color: rgba(229,229,229,1.0); */
+    color: var(--header-color);
     width: var(--toc-width);
     height: 100%;
     float: left;
     position: fixed;
     top: 0;
     bottom: 0;
-    background-color: rgba(125, 125, 125, 0.29);
+    /* background-color: rgba(125, 125, 125, 0.29); */
     overflow-y: scroll;
+    font-size: 10pt; /* /1.385 arial,helvetica,clean,sans-serif; */
+    display: block;
 }
 
 #table-of-contents ul {
