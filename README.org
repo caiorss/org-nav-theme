@@ -1,0 +1,215 @@
+#+TITLE: Org-nav
+#+STARTUP: content
+#+DESCRIPTION: org-mode theme with navigation bar for table of contents.
+
+#+HTML_HEAD: <link href="theme/org-nav-theme.css" rel="stylesheet"> 
+#+HTML_HEAD: <script src="theme/org-nav-theme.js"></script>
+
+* Org-nav theme 
+** What is it? 
+
+It is a theme for org-mode html export that makes easier to browser
+documents with very long table of contents. This theme displays a
+navigation bar at the left side.
+
+ - [[https:wwww.github.com/caiorss/org-nav][Github Repository]] 
+
+ - 
+
+** How to use it 
+
+Step 1. Put the directory ./theme where are the org-files and add to each org-file. 
+
+#+BEGIN_SRC sh
+$ tree .
+.
+├── README.html
+├── README.org
+└── theme
+    ├── org-nav-theme.css
+    └── org-nav-theme.js
+
+1 directory, 4 files
+#+END_SRC
+
+Step 2. Add thoses headers at the top of the file: 
+
+#+BEGIN_SRC 
+#+HTML_HEAD: <link href="theme/org-nav-theme.css" rel="stylesheet"> 
+#+HTML_HEAD: <script src="theme/org-nav-theme.css"></script>
+#+END_SRC
+
+Step 3. To export an org-file such as README.org to README.html run: 
+
+ - =M-x org-html-export-to-html=
+
+* Example of a long document
+** Examples 1 
+*** Dijkstra quote about APL  
+
+
+#+BEGIN_QUOTE
+“The competent programmer is fully aware of the strictly limited size of 
+his own skull; therefore he approaches the programming task in full 
+humility, and among other things he avoids clever tricks like the 
+plague. In the case of a well-known conversational programming 
+language I have been told from various sides that as soon as a 
+programming community is equipped with a terminal for it, a specific 
+phenomenon occurs that even has a well-established name: it is called 
+"the one-liners". It takes one of two different forms: one programmer 
+places a one-line program on the desk of another and either he proudly 
+tells what it does and adds the question "Can you code this in less 
+symbols?" —as if this were of any conceptual relevance!— or he just 
+asks "Guess what it does!". From this observation we must conclude 
+that this language as a tool is an open invitation for clever tricks; and 
+while exactly this may be the explanation for some of its appeal, viz. to 
+those who like to show how clever they are, I am sorry, but I must 
+regard this as one of the most damning things that can be said about a 
+programming language.” 
+
+-- Dijkstra on APL 
+#+END_QUOTE
+
+*** Quote from Cloud Flare 
+
+#+BEGIN_QUOTE
+Every technology, when sufficiently complicated, becomes
+programmable. 
+
+-- [[https://blog.cloudflare.com/introducing-cloudflare-workers/][Kenton Vardas]] / Cloud Flare. 
+#+END_QUOTE
+
+** Examples 2 
+*** Lorem-ipsum text 
+
+Lorem ipsum dolor sit amet, cu mei vero quodsi bonorum. Option oblique
+ceteros nec ut, et alii eros choro sit, at has alterum commune
+incorrupte. Cu mea munere aperiri, sea nominavi apeirian mnesarchum
+ex. Te duo euripidis persecuti, corrumpit quaerendum efficiantur vel
+at, ea omnium partiendo est. Nonumes apeirian tincidunt ne his, audire
+constituto te mea, ei imperdiet contentiones cum.
+
+Vis ex vitae deserunt convenire. Clita expetendis honestatis vis ea,
+ea altera consetetur mel, solet bonorum maiorum ut eum. Eum ad stet
+accommodare, atqui referrentur ut nam, nam eu autem aliquam
+consequat. Postea posidonium sed ex, sumo dolorem perpetua sit
+ea. Mandamus tractatos definiebas eu eam.
+
+Te vocent fierent mea, te pro sale ubique, ea vocibus voluptatibus
+sea. Eu impetus molestiae pri, libris antiopam est te, ad tota
+mandamus pertinacia mea. Id eam erat adolescens. Eos mutat malis dicit
+ea. Ex pri detracto sapientem, mea ad saperet recusabo. Has ad veritus
+adversarium, sed ea nusquam placerat, nulla pericula an pro.
+
+Cum integre detraxit ex, clita causae copiosae pro et, id sea cetero
+partiendo. Elit pericula theophrastus ea quo, ad nec aeterno
+referrentur, eos ea aperiam voluptatibus. Sed elitr prodesset
+quaerendum an. Et his possit iudicabit intellegebat, in graeci possit
+qui.
+
+Maiorum delicata forensibus ei pri, commodo officiis platonem mel et,
+iusto dolore ullamcorper nec in. Usu honestatis accommodare id,
+oblique atomorum interesset no qui. Ex oporteat conclusionemque
+est. Dolor quaerendum mea an. Mei et quaeque epicurei assentior,
+iudico tempor eu vel. Animal antiopam dissentias sed eu, id vel augue
+ullamcorper.
+
+*** Quick and dirty Javascript code  
+
+
+#+BEGIN_SRC js
+  var button = document.createElement("button")
+  button.textContent    = "Toggle";
+  button.style.top      = "20px";
+  button.style.left     = "30px";
+  button.style.position = "fixed";
+  button.style.zIndex   = 10000;
+
+
+  function hideNavBar(){
+      var toc = document.querySelector("#table-of-contents");
+      toc.style.display = "none";
+      document.documentElement.style.setProperty('--main-width', '90%');
+      // button.style.left = "10px";
+  }
+
+  function showNavBar(){
+      var toc = document.querySelector("#table-of-contents");
+      toc.style.display = "block";
+      document.documentElement.style.setProperty('--main-width', '70%');
+      // button.style.left = "25%";
+  }
+
+  var buttonFlag = false; 
+
+  button.addEventListener("click", function(){
+      if(buttonFlag == true) {
+          hideNavBar();
+          buttonFlag = false;
+      } else {
+          showNavBar();
+          buttonFlag = true;
+      }
+  });
+
+
+  var init = function(){
+      hideNavBar();
+      document.body.appendChild(button);
+  }
+  document.addEventListener("DOMContentLoaded", init, false);
+#+END_SRC
+
+*** Bullet lists 
+
+ - topic 1
+   - topic 1.1
+   - topic 1.2
+   - topic 1.3
+
+ - topic 2
+   - topic 2.1
+   - topic 2.2
+   - topic 2.3
+
+ - topic 3
+   - topic 3.1
+   - topic 3.2
+   - topic 3.3
+   - topic 3.4
+
+*** Topic 2.3
+** Tables everywhere! Gotta love tables!
+
+
+|               | Signature                                      | Description                                                           |
+|---------------+------------------------------------------------+-----------------------------------------------------------------------|
+|               |                                                |                                                                       |
+| ReaderT r m a |                                                | Encapsulates a function or computation (a -> m b) where m is a monad. |
+| ReaderT       | (r -> m a) -> ReaderT r m a                    |                                                                       |
+|               |                                                |                                                                       |
+| runReaderT    | ReaderT r m a -> r -> m a                      | Run computation and get its value.                                    |
+|               |                                                |                                                                       |
+|               |                                                |                                                                       |
+| return        | a -> (ReaderT r m) a                           | Monad return function.                                                |
+| (>>=)         | a -> (ReaderT r m) b -> (ReaderT r m) b        | Monad bind function.                                                  |
+|               |                                                |                                                                       |
+|               |                                                |                                                                       |
+| fmap          | (a -> b) -> (ReaderT r m) a -> (ReaderT r m) b | Apply a function (a -> b) to the result of computation Reader r a.    |
+|               |                                                |                                                                       |
+|               |                                                |                                                                       |
+| ask           | m r                                            | Read environment or configuration.                                    |
+|               |                                                |                                                                       |
+|               |                                                |                                                                       |
+| local         | (r -> r) -> m a -> m a                         | Modify environment by applying a function to it.                      |
+|               |                                                |                                                                       |
+|               |                                                |                                                                       |
+| liftIO        | MonadIO m => IO a -> m a                       |                                                                       |
+| liftIO        | IO a -> (Reader r m) a                         |                                                                       |
+|               |                                                |                                                                       |
+|               |                                                |                                                                       |
+
+
+
+
+
