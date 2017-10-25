@@ -1,0 +1,428 @@
+#+TITLE: Org-nav
+#+STARTUP: content
+#+DESCRIPTION: org-mode theme with navigation bar for big documents.
+
+#+INCLUDE: theme/org-nav.org
+
+* Org-nav theme 
+** What is it? 
+
+It is a theme for org-mode html export that makes easier to browser
+documents with very long table of contents. This theme displays a
+navigation bar at the left side.
+
+ - [[https:wwww.github.com/caiorss/org-nav-theme][Github Repository]] 
+
+ - [[https:wwww.github.com/caiorss/org-nav-theme][Demonstration]] 
+
+Screenshots:
+
+#+CAPTION: Screenshot 1 
+[[file:images/image1.png][file:images/image1.png]] 
+
+#+CAPTION: Screenshot 2 
+[[file:images/image2.png][file:images/image2.png]] 
+
+
+** Install it  
+
+Step 1. Put the directory ./theme where are the org-files and add to each org-file. 
+
+#+BEGIN_SRC sh
+$ tree .
+.
+├── README.html
+├── README.org
+└── theme
+    ├── org-nav.org
+    ├── org-nav-theme.css
+    └── org-nav-theme.js
+
+1 directory, 5 file
+#+END_SRC
+
+Step 2. Add thoses headers at the top of the file: 
+
+#+BEGIN_SRC 
+#+INCLUDE: theme/org-nav.org
+#+END_SRC
+
+Step 3. To export an org-file such as README.org to README.html run: 
+
+ - =M-x org-html-export-to-html=
+
+** Settings for syntax highlight 
+*** Overview 
+
+In order to export code blocks with syntax highligh, it is necessary to
+install the package _htmlize_ add this settings to Emacs init.el 
+
+*** Syntax highlight for latex fragments
+
+#+BEGIN_SRC emacs-lisp
+(setq org-highlight-latex-and-related '(latex script entities))
+#+END_SRC
+*** Syntax highlight for code blocks  #+BEGIN_SRC .. #+END_SRC 
+
+#+BEGIN_SRC emacs-lisp
+(setq org-src-fontify-natively t)
+#+END_SRC
+
+*** Htmlize output set by css 
+
+
+#+BEGIN_SRC emacs-lisp 
+;; (setq org-html-htmlize-output-type 'inline-css) ;; default
+(setq org-html-htmlize-output-type 'css)
+#+END_SRC
+
+*** Org-html htmlize font prefix 
+
+ #+BEGIN_SRC emacs-lisp 
+;; (setq org-html-htmlize-font-prefix "") ;; default
+(setq org-html-htmlize-font-prefix "org-")
+ #+END_SRC
+
+* Example of a long document
+** Examples 1 
+*** Dijkstra quote about APL  
+
+
+#+BEGIN_QUOTE
+“The competent programmer is fully aware of the strictly limited size of 
+his own skull; therefore he approaches the programming task in full 
+humility, and among other things he avoids clever tricks like the 
+plague. In the case of a well-known conversational programming 
+language I have been told from various sides that as soon as a 
+programming community is equipped with a terminal for it, a specific 
+phenomenon occurs that even has a well-established name: it is called 
+"the one-liners". It takes one of two different forms: one programmer 
+places a one-line program on the desk of another and either he proudly 
+tells what it does and adds the question "Can you code this in less 
+symbols?" —as if this were of any conceptual relevance!— or he just 
+asks "Guess what it does!". From this observation we must conclude 
+that this language as a tool is an open invitation for clever tricks; and 
+while exactly this may be the explanation for some of its appeal, viz. to 
+those who like to show how clever they are, I am sorry, but I must 
+regard this as one of the most damning things that can be said about a 
+programming language.” 
+
+-- Dijkstra on APL 
+#+END_QUOTE
+
+*** Quote from Cloud Flare 
+
+#+BEGIN_QUOTE
+Every technology, when sufficiently complicated, becomes
+programmable. 
+
+-- [[https://blog.cloudflare.com/introducing-cloudflare-workers/][Kenton Vardas]] / Cloud Flare. 
+#+END_QUOTE
+
+** Examples 2 
+*** Lorem-ipsum text 
+
+Lorem ipsum dolor sit amet, cu mei vero quodsi bonorum. Option oblique
+ceteros nec ut, et alii eros choro sit, at has alterum commune
+incorrupte. Cu mea munere aperiri, sea nominavi apeirian mnesarchum
+ex. Te duo euripidis persecuti, corrumpit quaerendum efficiantur vel
+at, ea omnium partiendo est. Nonumes apeirian tincidunt ne his, audire
+constituto te mea, ei imperdiet contentiones cum.
+
+Vis ex vitae deserunt convenire. Clita expetendis honestatis vis ea,
+ea altera consetetur mel, solet bonorum maiorum ut eum. Eum ad stet
+accommodare, atqui referrentur ut nam, nam eu autem aliquam
+consequat. Postea posidonium sed ex, sumo dolorem perpetua sit
+ea. Mandamus tractatos definiebas eu eam.
+
+Te vocent fierent mea, te pro sale ubique, ea vocibus voluptatibus
+sea. Eu impetus molestiae pri, libris antiopam est te, ad tota
+mandamus pertinacia mea. Id eam erat adolescens. Eos mutat malis dicit
+ea. Ex pri detracto sapientem, mea ad saperet recusabo. Has ad veritus
+adversarium, sed ea nusquam placerat, nulla pericula an pro.
+
+Cum integre detraxit ex, clita causae copiosae pro et, id sea cetero
+partiendo. Elit pericula theophrastus ea quo, ad nec aeterno
+referrentur, eos ea aperiam voluptatibus. Sed elitr prodesset
+quaerendum an. Et his possit iudicabit intellegebat, in graeci possit
+qui.
+
+Maiorum delicata forensibus ei pri, commodo officiis platonem mel et,
+iusto dolore ullamcorper nec in. Usu honestatis accommodare id,
+oblique atomorum interesset no qui. Ex oporteat conclusionemque
+est. Dolor quaerendum mea an. Mei et quaeque epicurei assentior,
+iudico tempor eu vel. Animal antiopam dissentias sed eu, id vel augue
+ullamcorper.
+
+*** Quick and dirty Javascript code  
+
+
+#+BEGIN_SRC js
+  var button = document.createElement("button")
+  button.textContent    = "Toggle";
+  button.style.top      = "20px";
+  button.style.left     = "30px";
+  button.style.position = "fixed";
+  button.style.zIndex   = 10000;
+
+
+  function hideNavBar(){
+      var toc = document.querySelector("#table-of-contents");
+      toc.style.display = "none";
+      document.documentElement.style.setProperty('--main-width', '90%');
+      // button.style.left = "10px";
+  }
+
+  function showNavBar(){
+      var toc = document.querySelector("#table-of-contents");
+      toc.style.display = "block";
+      document.documentElement.style.setProperty('--main-width', '70%');
+      // button.style.left = "25%";
+  }
+
+  var buttonFlag = false; 
+
+  button.addEventListener("click", function(){
+      if(buttonFlag == true) {
+          hideNavBar();
+          buttonFlag = false;
+      } else {
+          showNavBar();
+          buttonFlag = true;
+      }
+  });
+
+
+  var init = function(){
+      hideNavBar();
+      document.body.appendChild(button);
+  }
+  document.addEventListener("DOMContentLoaded", init, false);
+#+END_SRC
+
+*** Bullet lists 
+
+ - topic 1
+   - topic 1.1
+   - topic 1.2
+   - topic 1.3
+
+ - topic 2
+   - topic 2.1
+   - topic 2.2
+   - topic 2.3
+
+ - topic 3
+   - topic 3.1
+   - topic 3.2
+   - topic 3.3
+   - topic 3.4
+
+*** Topic 2.3
+** Tables everywhere! Gotta love tables!
+
+
+|               | Signature                                      | Description                                                           |
+|---------------+------------------------------------------------+-----------------------------------------------------------------------|
+|               |                                                |                                                                       |
+| ReaderT r m a |                                                | Encapsulates a function or computation (a -> m b) where m is a monad. |
+| ReaderT       | (r -> m a) -> ReaderT r m a                    |                                                                       |
+|               |                                                |                                                                       |
+| runReaderT    | ReaderT r m a -> r -> m a                      | Run computation and get its value.                                    |
+|               |                                                |                                                                       |
+|               |                                                |                                                                       |
+| return        | a -> (ReaderT r m) a                           | Monad return function.                                                |
+| (>>=)         | a -> (ReaderT r m) b -> (ReaderT r m) b        | Monad bind function.                                                  |
+|               |                                                |                                                                       |
+|               |                                                |                                                                       |
+| fmap          | (a -> b) -> (ReaderT r m) a -> (ReaderT r m) b | Apply a function (a -> b) to the result of computation Reader r a.    |
+|               |                                                |                                                                       |
+|               |                                                |                                                                       |
+| ask           | m r                                            | Read environment or configuration.                                    |
+|               |                                                |                                                                       |
+|               |                                                |                                                                       |
+| local         | (r -> r) -> m a -> m a                         | Modify environment by applying a function to it.                      |
+|               |                                                |                                                                       |
+|               |                                                |                                                                       |
+| liftIO        | MonadIO m => IO a -> m a                       |                                                                       |
+| liftIO        | IO a -> (Reader r m) a                         |                                                                       |
+|               |                                                |                                                                       |
+|               |                                                |                                                                       |
+** C/C++ and the big picture - System Programmign 
+
+
+*Platform and Processors* 
+
+_Processors:_
+
+ - Intel - x86 (32 bits)    architecture
+
+ - Intel/AMD x64 (64 bits)  architecture
+
+ - PowerPC - Embedded systems, printers ...
+
+ - ARM - Processor architecture used in smartphones, tablets, security
+   cameras ...
+
+ - AVR - Microcontroller - SOC (System On Chip) - 8 bits, 16 bits and
+   32 bits. 
+
+_Operating Systems_
+
+ - GNU/Linux
+
+ - Android/Linux (Android is a modified Linux with custom basic libc
+   C-library based on BSD c-lib).
+
+ - Windows
+
+ - Mac OSX
+
+ - FreeBSD, NetBSD, OpenBSD
+
+ - VxWorks - Real Time OS for Embedded Systems.
+
+ - QNX
+
+_Main APIs_ 
+
+ - Unix API - Common libaries and header files in Unix-like operating
+   systems like Linux, BSD variants and OSX and IOS.
+
+ - Windows / Windows Operating System - windows.h
+
+*Compilers*
+
+ - gcc (g++) - GNU C Compiler 
+
+ - mingw - gcc/g++ ported for Windows 
+
+ - clang (llvm)
+
+ - Microsoft C++ compiler 
+
+*CPP / C++ Dialects* 
+ 
+ - Legacy C/C++
+
+ - C++11
+
+ - C++14 
+
+*File Formats*
+
+| File Format            | Description                                              |   |
+|------------------------+----------------------------------------------------------+---|
+|                        | *Source Code*                                            |   |
+|                        |                                                          |   |
+| .asm                   | Assembly Source code - Used for very low level handling. |   |
+|                        |                                                          |   |
+| .c                     | c-language source code                                   |   |
+| .h                     | c-langauge header file                                   |   |
+|                        |                                                          |   |
+| .cpp                   | C++ source code                                          |   |
+| .hpp                   | C++ header file                                          |   |
+|                        |                                                          |   |
+|                        | *Object Code / Compiled*                                 |   |
+|------------------------+----------------------------------------------------------+---|
+| .o                     | Object file created before linking.                      |   |
+|                        |                                                          |   |
+|                        | *Shared Libraries*                                       |   |
+| .dll                   | Windows shared library                                   |   |
+| .so                    | Linux shared Library                                     |   |
+| .dylib                 | Mac OSX shared library                                   |   |
+|                        |                                                          |   |
+|                        | *Exectuables*                                            |   |
+| .bin or any extensions | Linux/ Unix / OSX executables  - ELF Format              |   |
+| .exe                   | Windows Executable - PE32 - Portable Executable          |   |
+|                        |                                                          |   |
+|                        |                                                          |   |
+
+
+
+** Simple C++ program 
+
+#+BEGIN_SRC cpp 
+/**   File:      dataTypeSizes.cpp 
+      Objective: Show C/C++ primitive data types sizes.      
+ */
+
+#include <iostream>
+#include <limits>
+
+using namespace std;
+
+
+int main(){
+  // 8 bits / 1 byte numeric types
+  //---------------------------------------------------
+  int charMin = numeric_limits<char>::min() ;
+  int charMax = numeric_limits<char>::max() ;
+  
+  int scharMin = numeric_limits<signed char>::min() ;
+  int scharMax = numeric_limits<signed char>::max() ;
+
+  int ucharMin = numeric_limits<unsigned char>::min() ;
+  int ucharMax = numeric_limits<unsigned char>::max() ;
+
+  int int8Min  = numeric_limits<int8_t>::min() ;
+  int int8Max  = numeric_limits<int8_t>::max() ;  
+
+  int uint8Min  = numeric_limits<uint8_t>::min() ;
+  int uint8Max  = numeric_limits<uint8_t>::max() ;
+
+  // 16 bits / 2 bytes Numeric types
+  //---------------------------------------------------
+  
+  int shortMin  = numeric_limits<short>::min() ;
+  int shortMax  = numeric_limits<short>::max() ;
+
+  int ushortMin  = numeric_limits<unsigned short>::min() ;
+  int ushortMax  = numeric_limits<unsigned short>::max() ;
+  
+  int int16Min  = numeric_limits<int16_t>::min() ;
+  int int16Max  = numeric_limits<int16_t>::max() ;  
+
+  int uint16Min  = numeric_limits<uint16_t>::min() ;
+  int uint16Max  = numeric_limits<uint16_t>::max() ;  
+
+  // 32 bits / 4 bytes Numeric types
+  //---------------------------------------------------
+    
+  int intMin  = numeric_limits<int>::min() ;
+  int intMax  = numeric_limits<int>::max() ;  
+  
+  cout << "C/C++ Data type sizes in number of bytes (1 byte = 8 bits)" << endl;
+
+  cout << "\n1 byte / 8 bits Data types"                       << endl;
+  cout <<  "------------------------------------"              << endl; 
+  cout << "sizeof(char)          = " << sizeof(char)           << " min = " << charMin  << " max = " << charMax << endl; 
+  cout << "sizeof(signed char)   = " << sizeof(signed char)    << " min = " << scharMin << " max = " << scharMax << endl; 
+  cout << "sizeof(unsigned char) = " << sizeof(unsigned char)  << " min = " << ucharMin << " max = " << ucharMax << endl; 
+  cout << "sizeof(int8_t)        = " << sizeof(int8_t)         << " min = " << int8Min  << " max = " << int8Max << endl; 
+  cout << "sizeof(uint8_t)       = " << sizeof(uint8_t)        << " min = " << uint8Min << " max = " << uint8Max << endl; 
+  
+  cout << "\n2 bytes / 16 bits Data types"                     << endl;  
+  cout <<  "------------------------------------"              << endl;   
+  cout << "sizeof(short)         = " << sizeof(short)          << " min = " << shortMin  << " max = " << shortMax  << endl; 
+  cout << "sizeof(usigned short) = " << sizeof(unsigned short) << " min = " << ushortMin << " max = " << ushortMax << endl; 
+  cout << "sizeof(int16_t)       = " << sizeof(int16_t)        << " min = " << int16Min  << " max = " << int16Max  << endl;  
+  cout << "sizeof(uint16_t)      = " << sizeof(uint16_t)       << " min = " << uint16Min << " max = " << uint16Max << endl;  
+  
+  cout << "\n4 bytes / 32 bits Data types"                    << endl;  
+  cout <<  "------------------------------------"             << endl;   
+  cout << "sizeof(int)           = " << sizeof(int)           << " min = " << intMin << " max = " << intMax << endl;  
+  cout << "sizeof(int32_t)       = " << sizeof(int32_t)       << endl;
+  cout << "sizeof(int64_t)       = " << sizeof(int64_t)       << endl;
+  
+  cout << "sizeof(float)         = " << sizeof(float)         << endl;  
+    cout << "\n8 bytes / 64 bits Data types"                    << endl;  
+  cout <<  "------------------------------------"             << endl;    
+  cout << "sizeof(long)          = " << sizeof(long)          << endl;
+  cout << "sizeof(long long)     = " << sizeof(long long)     << endl;    
+  cout << "sizeof(double)        = " << sizeof(double)        << endl;  
+  
+  return 0;
+}
+
+#+END_SRC
