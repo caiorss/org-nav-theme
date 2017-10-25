@@ -1,9 +1,8 @@
 #+TITLE: Org-nav
 #+STARTUP: content
-#+DESCRIPTION: org-mode theme with navigation bar for table of contents.
+#+DESCRIPTION: org-mode theme with navigation bar for big documents.
 
-#+HTML_HEAD: <link href="theme/org-nav-theme.css" rel="stylesheet"> 
-#+HTML_HEAD: <script src="theme/org-nav-theme.js"></script>
+#+INCLUDE: theme/org-nav.org
 
 * Org-nav theme 
 ** What is it? 
@@ -12,11 +11,20 @@ It is a theme for org-mode html export that makes easier to browser
 documents with very long table of contents. This theme displays a
 navigation bar at the left side.
 
- - [[https:wwww.github.com/caiorss/org-nav][Github Repository]] 
+ - [[https:wwww.github.com/caiorss/org-nav-theme][Github Repository]] 
 
- - 
+ - [[https:wwww.github.com/caiorss/org-nav-theme][Demonstration]] 
 
-** How to use it 
+Screenshots:
+
+#+CAPTION: Screenshot 1 
+[[file:images/image1.png][file:images/image1.png]] 
+
+#+CAPTION: Screenshot 2 
+[[file:images/image2.png][file:images/image2.png]] 
+
+
+** Install it  
 
 Step 1. Put the directory ./theme where are the org-files and add to each org-file. 
 
@@ -26,22 +34,54 @@ $ tree .
 ├── README.html
 ├── README.org
 └── theme
+    ├── org-nav.org
     ├── org-nav-theme.css
     └── org-nav-theme.js
 
-1 directory, 4 files
+1 directory, 5 file
 #+END_SRC
 
 Step 2. Add thoses headers at the top of the file: 
 
 #+BEGIN_SRC 
-#+HTML_HEAD: <link href="theme/org-nav-theme.css" rel="stylesheet"> 
-#+HTML_HEAD: <script src="theme/org-nav-theme.css"></script>
+#+INCLUDE: theme/org-nav.org
 #+END_SRC
 
 Step 3. To export an org-file such as README.org to README.html run: 
 
  - =M-x org-html-export-to-html=
+
+** Settings for syntax highlight 
+*** Overview 
+
+In order to export code blocks with syntax highligh, it is necessary to
+install the package _htmlize_ add this settings to Emacs init.el 
+
+*** Syntax highlight for latex fragments
+
+#+BEGIN_SRC emacs-lisp
+(setq org-highlight-latex-and-related '(latex script entities))
+#+END_SRC
+*** Syntax highlight for code blocks  #+BEGIN_SRC .. #+END_SRC 
+
+#+BEGIN_SRC emacs-lisp
+(setq org-src-fontify-natively t)
+#+END_SRC
+
+*** Htmlize output set by css 
+
+
+#+BEGIN_SRC emacs-lisp 
+;; (setq org-html-htmlize-output-type 'inline-css) ;; default
+(setq org-html-htmlize-output-type 'css)
+#+END_SRC
+
+*** Org-html htmlize font prefix 
+
+ #+BEGIN_SRC emacs-lisp 
+;; (setq org-html-htmlize-font-prefix "") ;; default
+(setq org-html-htmlize-font-prefix "org-")
+ #+END_SRC
 
 * Example of a long document
 ** Examples 1 
@@ -297,7 +337,6 @@ _Main APIs_
 | .exe                   | Windows Executable - PE32 - Portable Executable          |   |
 |                        |                                                          |   |
 |                        |                                                          |   |
-
 
 
 
