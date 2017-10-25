@@ -20,7 +20,7 @@
 
     
     /** Content lenght */
-    --main-width: 70%;
+    --main-width: 90%;
 
     --header-color:  #1572AE;
 
@@ -58,7 +58,6 @@ a {
     background-color: transparent;
     -webkit-text-decoration-skip: objects;
 }
-
 
 
 body {
