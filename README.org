@@ -11,9 +11,9 @@ It is a theme for org-mode html export that makes easier to browser
 documents with very long table of contents. This theme displays a
 navigation bar at the left side.
 
- - [[https:wwww.github.com/caiorss/org-nav-theme][Github Repository]] 
+ - [[https://github.com/caiorss/org-nav-theme][Github Repository]] 
 
- - [[https:wwww.github.com/caiorss/org-nav-theme][Demonstration]] 
+ - [[https://caiorss.github.io/org-nav-theme][Demonstration]] 
 
 Screenshots:
 
