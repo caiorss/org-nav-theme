@@ -237,8 +237,11 @@ pre {
 
 	/* color:#fff; */
     /* color:#555; */
-	padding:2em 28px;
-	margin:0;
+
+    padding:2em 28px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
 	width:95%;
 	/* float:right; */
 	/* clear:right; */
