@@ -44,6 +44,10 @@ h3, h4, h5, h6 {
     color: #1572AE;
 }
 
+h2 {
+    color: #3c4c6c;
+}
+
 
 /** Hyperlink General Styles */
 a {
@@ -163,7 +167,7 @@ table {
 th {
     /* padding-top: 30px; */
     font-weight: bold;
-    background-color: #cccccc;
+    background-color: #93A5BB;
     /* text-align: justified; */
 }
 

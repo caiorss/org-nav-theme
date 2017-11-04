@@ -2,7 +2,7 @@
 #+STARTUP: content
 #+DESCRIPTION: org-mode theme with navigation bar for big documents.
 
-#+INCLUDE: theme/org-nav.org
+#+INCLUDE: theme/theme.org
 
 * Org-nav theme 
 ** What is it? 
@@ -22,7 +22,6 @@ Screenshots:
 
 #+CAPTION: Screenshot 2 
 [[file:images/image2.png][file:images/image2.png]] 
-
 
 ** Install it  
 
@@ -83,7 +82,7 @@ install the package _htmlize_ add this settings to Emacs init.el
 (setq org-html-htmlize-font-prefix "org-")
  #+END_SRC
 
-* Example of a long document
+* Example of how this theme would look like
 ** Examples 1 
 *** Dijkstra quote about APL  
 
@@ -337,7 +336,6 @@ _Main APIs_
 | .exe                   | Windows Executable - PE32 - Portable Executable          |   |
 |                        |                                                          |   |
 |                        |                                                          |   |
-
 
 
 ** Simple C++ program 
