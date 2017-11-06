@@ -33,7 +33,7 @@
     --linkcolor: #17a81a;  /* #007bb8; */
 
     /** Body background color - Usef #fff for white. */
-    --bodyBgColor: #f2f2f2;
+    --bodyBgColor: white; /* #f2f2f2; */
 }
 
 
@@ -176,6 +176,8 @@ table {
     width:           90%;
     margin-top:      20px;
     margin-bottom:   20px;
+
+    background-color: lavender;
 }
 
 th {
