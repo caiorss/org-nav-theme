@@ -196,6 +196,16 @@ td,th {
     /* width: 100%; */
 }
 
+/** Align table caption to the left. */
+caption {
+    text-align: left;
+}
+
+/** Align picture caption to the left. */
+.figure p {
+    text-align: left;
+}
+
 /**========= Blockquote and citations ============ */
 
 blockquote {
