@@ -15,7 +15,7 @@
 :root {
 
     /** Table of contents settings */
-    --toc-width:   25%;        
+    --toc-width:   230px;        
     --toc-bgcolor:  lightcyan;
 
     
@@ -51,15 +51,15 @@ h2 {
 
 /** Hyperlink General Styles */
 a {
-    color: #007bb8;
-    cursor: pointer;
-    text-decoration: none;
+    color:              #007bb8;
+    cursor:             pointer;
+    text-decoration:    none;
     -webkit-transition: none 86ms ease-out;
-    transition: none 86ms ease-out;
+    transition:         none 86ms ease-out;
 }
 
 a {
-    background-color: transparent;
+    background-color:             transparent;
     -webkit-text-decoration-skip: objects;
 }
 
@@ -71,8 +71,8 @@ body {
     /* margin-left:  50%; */
     float:            right;
     /* position:         relative; */
-    width:            var(--main-width);
-    padding-left:     35%;
+    /* width:            var(--main-width); */
+    margin-left:     300px;
     /* overflow-x:       scroll; */
     background-color: rgba(255,255,255,1.0);
     /* z-index:          9999; */
@@ -80,7 +80,7 @@ body {
 
 
 #table-of-contents {
-    background-color: rgba(229,229,229,1.0);
+    background-color: rgb(231, 246, 239);
     /* border-color: #CCCCCC #BBBBBB #888888; */
     /* background-image: linear-gradient(to bottom, #7b0105 0%, #b8282c 100%); */
     
@@ -98,7 +98,11 @@ body {
     z-index: 9999;
 
     /** Initially hide navigation bar*/
-    display: none;  
+    display: none;
+
+    text-align: left;
+
+    font-family: "Segoe UI", Segoe, Calibri, "Nimbus Sans L", "Ubuntu", Tahoma, Arial, Helvetica, Verdana, sans-serif;
 }
 
 
@@ -112,14 +116,14 @@ body {
 
 #table-of-contents li {
     padding-left: 10px;
-    padding-top:  15px;
-    font-size: 10pt;
+    padding-top:   4px;
+    font-size:    14px;
 }
 
 #table-of-contents  a {
     /* color:          rgba(0,0,0,1); */
-    font-weight:    700;
-    color:          #364149;
+    /* font-weight:    700; */
+    color:          rgb(11, 83, 149);
     position:       relative;
     text-overflow:  ellipsis;
 }

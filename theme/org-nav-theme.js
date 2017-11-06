@@ -9,14 +9,22 @@ button.style.zIndex   = 10000;
 function hideNavBar(){
     var toc = document.querySelector("#table-of-contents");
     toc.style.display = "none";
-    document.documentElement.style.setProperty('--main-width', '90%');
+    // document.documentElement.style.setProperty('--main-width', '90%');
+    document.querySelector("body")
+        .style
+        .setProperty("margin-left", "100px");
+    
     // button.style.left = "10px";
 }
 
 function showNavBar(){
     var toc = document.querySelector("#table-of-contents");
     toc.style.display = "block";
-    document.documentElement.style.setProperty('--main-width', '70%');
+    // document.documentElement.style.setProperty('--main-width', '100%');
+    document.querySelector("body")
+        .style
+        .setProperty("margin-left", "250px");
+    
     // button.style.left = "25%";
 }
 
