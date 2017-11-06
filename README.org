@@ -23,6 +23,22 @@ Screenshots:
 #+CAPTION: Screenshot 2 
 [[file:images/image2.png][file:images/image2.png]] 
 
+** Objectives 
+
+Make a customizable and convenient theme for reading long documents in
+org-mode.
+
+Ideas: 
+
+ - Strive for readability.
+
+ - Make the convenient for documents with long table of contents.
+
+ - Load fast, using the minimum of javascript as possible.
+
+ - Make this theme convenient for mobile devices.
+
+
 ** Install it  
 
 Step 1. Put the directory ./theme where are the org-files and add to each org-file. 
@@ -247,7 +263,7 @@ ullamcorper.
 | liftIO        | IO a -> (Reader r m) a                         |                                                                       |
 |               |                                                |                                                                       |
 |               |                                                |                                                                       |
-** C/C++ and the big picture - System Programmign 
+** C/C++ and the big picture - System Programming 
 
 
 *Platform and Processors* 
@@ -310,6 +326,7 @@ _Main APIs_
 
 *File Formats*
 
+#+CAPTION: Reader monad transformer type signatures
 | File Format            | Description                                              |   |
 |------------------------+----------------------------------------------------------+---|
 |                        | *Source Code*                                            |   |
@@ -336,7 +353,6 @@ _Main APIs_
 | .exe                   | Windows Executable - PE32 - Portable Executable          |   |
 |                        |                                                          |   |
 |                        |                                                          |   |
-
 
 ** Simple C++ program 
 
