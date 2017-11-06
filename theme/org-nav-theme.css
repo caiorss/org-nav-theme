@@ -15,7 +15,7 @@
 :root {
 
     /** Table of contents settings */
-    --toc-width:   25%;        
+    --toc-width:   230px;        
     --toc-bgcolor:  lightcyan;
 
     
@@ -28,15 +28,25 @@
     --max-image-width: 600px;
     
     --max-text-width: 90%;  /* Max paragraph length and text in bullet lists. */
+
+    /** Color of hyperlinks at the body. tag <a> */
+    --linkcolor: #17a81a;  /* #007bb8; */
+
+    /** Body background color - Usef #fff for white. */
+    --bodyBgColor: white; /* #f2f2f2; */
 }
 
 
 
 h1 {
+
     text-align: center;
+    color:      maroon;
+    font-weight: bold;
+    font-size:   200%;
 }
 
-h1, ul#tabs, h2, h3, h4, h5 {
+ul#tabs, h2, h3, h4, h5 {
     font-family: "Trebuchet MS",Verdana,sans-serif;
 }
 
@@ -44,18 +54,22 @@ h3, h4, h5, h6 {
     color: #1572AE;
 }
 
+h2 {
+    color: #3c4c6c;
+}
+
 
 /** Hyperlink General Styles */
 a {
-    color: #007bb8;
-    cursor: pointer;
-    text-decoration: none;
+    color:              var(--linkcolor);
+    cursor:             pointer;
+    text-decoration:    none;
     -webkit-transition: none 86ms ease-out;
-    transition: none 86ms ease-out;
+    transition:         none 86ms ease-out;
 }
 
 a {
-    background-color: transparent;
+    background-color:             transparent;
     -webkit-text-decoration-skip: objects;
 }
 
@@ -67,16 +81,16 @@ body {
     /* margin-left:  50%; */
     float:            right;
     /* position:         relative; */
-    width:            var(--main-width);
-    padding-left:     35%;
+    /* width:            var(--main-width); */
+    margin-left:     300px;
     /* overflow-x:       scroll; */
-    background-color: rgba(255,255,255,1.0);
+    background-color:  var(--bodyBgColor); /* rgba(255,255,255,1.0); */
     /* z-index:          9999; */
 }
 
 
 #table-of-contents {
-    background-color: rgba(229,229,229,1.0);
+    background-color: rgb(231, 246, 239);
     /* border-color: #CCCCCC #BBBBBB #888888; */
     /* background-image: linear-gradient(to bottom, #7b0105 0%, #b8282c 100%); */
     
@@ -94,7 +108,11 @@ body {
     z-index: 9999;
 
     /** Initially hide navigation bar*/
-    display: none;  
+    display: none;
+
+    text-align: left;
+
+    font-family: "Segoe UI", Segoe, Calibri, "Nimbus Sans L", "Ubuntu", Tahoma, Arial, Helvetica, Verdana, sans-serif;
 }
 
 
@@ -108,14 +126,14 @@ body {
 
 #table-of-contents li {
     padding-left: 10px;
-    padding-top:  15px;
-    font-size: 10pt;
+    padding-top:   4px;
+    font-size:    14px;
 }
 
 #table-of-contents  a {
     /* color:          rgba(0,0,0,1); */
-    font-weight:    700;
-    color:          #364149;
+    /* font-weight:    700; */
+    color:          rgb(11, 83, 149);
     position:       relative;
     text-overflow:  ellipsis;
 }
@@ -158,12 +176,16 @@ table {
     width:           90%;
     margin-top:      20px;
     margin-bottom:   20px;
+
+    background-color: lavender;
 }
 
 th {
+    background-color: black;
+    color: white;
     /* padding-top: 30px; */
     font-weight: bold;
-    background-color: #cccccc;
+
     /* text-align: justified; */
 }
 
@@ -174,6 +196,16 @@ th.left {
 td,th {
 	padding: 0;
     /* width: 100%; */
+}
+
+/** Align table caption to the left. */
+caption {
+    text-align: left;
+}
+
+/** Align picture caption to the left. */
+.figure p {
+    text-align: left;
 }
 
 /**========= Blockquote and citations ============ */
@@ -234,7 +266,8 @@ pre {
     font-size: 10pt;
 
 	/* background-color:#292929; */
-    background:#fff;
+    background-color: #e4eadb;
+    filter: invert(90%); 
 
     /* background: #333;    */
 
@@ -247,12 +280,12 @@ pre {
     margin-top: 20px;
     margin-bottom: 20px;
     
-	width:95%;
+	width:  95%;
 	/* float:right; */
 	/* clear:right; */
-    line-height: 25.6px;
+
     border-radius: 16px;
-    border: 1px solid #777;
+    /* border: 1px solid #777; */
 	box-sizing:border-box;
 	/* text-shadow:0px 1px 2px rgba(0,0,0,0.4) */
 
@@ -290,6 +323,6 @@ pre span.org-rainbow-delimiters-depth-8  {color:#80a880;}
 pre span.org-rainbow-delimiters-depth-9  {color:#887070;}
 pre span.org-sh-quoted-exec              {color:#FF1493;}
 
-pre {
-    filter: invert(80%);
-}
+/* pre { */
+/*     filter: invert(80%); */
+/* } */

@@ -1,0 +1,1096 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Org-nav</title>
+<!-- 2017-11-06 Mon 16:57 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="Caio Rodrigues Soares Silva" />
+<meta  name="description" content="org-mode theme with navigation bar for big documents."
+ />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<link href="theme/org-nav-theme.css" rel="stylesheet">
+<script src="theme/org-nav-theme.js"></script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Org-nav</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. Org-nav theme</a>
+<ul>
+<li><a href="#sec-1-1">1.1. What is it?</a></li>
+<li><a href="#sec-1-2">1.2. Objectives</a></li>
+<li><a href="#sec-1-3">1.3. Install it</a></li>
+<li><a href="#sec-1-4">1.4. Settings for syntax highlight</a>
+<ul>
+<li><a href="#sec-1-4-1">1.4.1. Overview</a></li>
+<li><a href="#sec-1-4-2">1.4.2. Syntax highlight for latex fragments</a></li>
+<li><a href="#sec-1-4-3">1.4.3. Syntax highlight for code blocks  #+BEGIN_SRC .. #+END_SRC</a></li>
+<li><a href="#sec-1-4-4">1.4.4. Htmlize output set by css</a></li>
+<li><a href="#sec-1-4-5">1.4.5. Org-html htmlize font prefix</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#sec-2">2. Example of how this theme would look like</a>
+<ul>
+<li><a href="#sec-2-1">2.1. Examples 1</a>
+<ul>
+<li><a href="#sec-2-1-1">2.1.1. Dijkstra quote about APL</a></li>
+<li><a href="#sec-2-1-2">2.1.2. Quote from Cloud Flare</a></li>
+</ul>
+</li>
+<li><a href="#sec-2-2">2.2. Examples 2</a>
+<ul>
+<li><a href="#sec-2-2-1">2.2.1. Lorem-ipsum text</a></li>
+<li><a href="#sec-2-2-2">2.2.2. Quick and dirty Javascript code</a></li>
+<li><a href="#sec-2-2-3">2.2.3. Bullet lists</a></li>
+<li><a href="#sec-2-2-4">2.2.4. Topic 2.3</a></li>
+</ul>
+</li>
+<li><a href="#sec-2-3">2.3. Tables everywhere! Gotta love tables!</a></li>
+<li><a href="#sec-2-4">2.4. C/C++ and the big picture - System Programming</a></li>
+<li><a href="#sec-2-5">2.5. Simple C++ program</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Org-nav theme</h2>
+<div class="outline-text-2" id="text-1">
+</div><div id="outline-container-sec-1-1" class="outline-3">
+<h3 id="sec-1-1"><span class="section-number-3">1.1</span> What is it?</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+It is a theme for org-mode html export that makes easier to browser
+documents with very long table of contents. This theme displays a
+navigation bar at the left side.
+</p>
+
+<ul class="org-ul">
+<li><a href="https://github.com/caiorss/org-nav-theme">Github Repository</a> 
+</li>
+
+<li><a href="https://caiorss.github.io/org-nav-theme">Demonstration</a> 
+</li>
+</ul>
+
+<p>
+Screenshots:
+</p>
+
+
+<div class="figure">
+<p><a href="images/image1.png"><img src="images/image1.png" alt="image1.png" /></a> 
+</p>
+<p><span class="figure-number">Figure 1:</span> Screenshot 1</p>
+</div>
+
+
+<div class="figure">
+<p><a href="images/image2.png"><img src="images/image2.png" alt="image2.png" /></a> 
+</p>
+<p><span class="figure-number">Figure 2:</span> Screenshot 2</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-1-2" class="outline-3">
+<h3 id="sec-1-2"><span class="section-number-3">1.2</span> Objectives</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+Make a customizable and convenient theme for reading long documents in
+org-mode.
+</p>
+
+<p>
+Ideas: 
+</p>
+
+<ul class="org-ul">
+<li>Strive for readability.
+</li>
+
+<li>Make the convenient for documents with long table of contents.
+</li>
+
+<li>Load fast, using the minimum of javascript as possible.
+</li>
+
+<li>Make this theme convenient for mobile devices.
+</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-sec-1-3" class="outline-3">
+<h3 id="sec-1-3"><span class="section-number-3">1.3</span> Install it</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+Step 1. Put the directory ./theme where are the org-files and add to each org-file. 
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-sh">$ tree .
+<span class="org-builtin">.</span>
+&#9500;&#9472;&#9472; README.html
+&#9500;&#9472;&#9472; README.org
+&#9492;&#9472;&#9472; theme
+    &#9500;&#9472;&#9472; org-nav.org
+    &#9500;&#9472;&#9472; org-nav-theme.css
+    &#9492;&#9472;&#9472; org-nav-theme.js
+
+1 directory, 5 file
+</pre>
+</div>
+
+<p>
+Step 2. Add thoses headers at the top of the file: 
+</p>
+
+<pre class="example">
+#+INCLUDE: theme/org-nav.org
+</pre>
+
+<p>
+Step 3. To export an org-file such as README.org to README.html run: 
+</p>
+
+<ul class="org-ul">
+<li><code>M-x org-html-export-to-html</code>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-1-4" class="outline-3">
+<h3 id="sec-1-4"><span class="section-number-3">1.4</span> Settings for syntax highlight</h3>
+<div class="outline-text-3" id="text-1-4">
+</div><div id="outline-container-sec-1-4-1" class="outline-4">
+<h4 id="sec-1-4-1"><span class="section-number-4">1.4.1</span> Overview</h4>
+<div class="outline-text-4" id="text-1-4-1">
+<p>
+In order to export code blocks with syntax highligh, it is necessary to
+install the package <span class="underline">htmlize</span> add this settings to Emacs init.el 
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-1-4-2" class="outline-4">
+<h4 id="sec-1-4-2"><span class="section-number-4">1.4.2</span> Syntax highlight for latex fragments</h4>
+<div class="outline-text-4" id="text-1-4-2">
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp"><span class="org-rainbow-delimiters-depth-1">(</span><span class="org-keyword">setq</span> org-highlight-latex-and-related '<span class="org-rainbow-delimiters-depth-2">(</span>latex script entities<span class="org-rainbow-delimiters-depth-2">)</span><span class="org-rainbow-delimiters-depth-1">)</span>
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-1-4-3" class="outline-4">
+<h4 id="sec-1-4-3"><span class="section-number-4">1.4.3</span> Syntax highlight for code blocks  #+BEGIN_SRC .. #+END_SRC</h4>
+<div class="outline-text-4" id="text-1-4-3">
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp"><span class="org-rainbow-delimiters-depth-1">(</span><span class="org-keyword">setq</span> org-src-fontify-natively t<span class="org-rainbow-delimiters-depth-1">)</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-1-4-4" class="outline-4">
+<h4 id="sec-1-4-4"><span class="section-number-4">1.4.4</span> Htmlize output set by css</h4>
+<div class="outline-text-4" id="text-1-4-4">
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp"><span class="org-comment-delimiter">;; </span><span class="org-comment">(setq org-html-htmlize-output-type 'inline-css) ;; default</span>
+<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-keyword">setq</span> org-html-htmlize-output-type 'css<span class="org-rainbow-delimiters-depth-1">)</span>
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-1-4-5" class="outline-4">
+<h4 id="sec-1-4-5"><span class="section-number-4">1.4.5</span> Org-html htmlize font prefix</h4>
+<div class="outline-text-4" id="text-1-4-5">
+<div class="org-src-container">
+
+<pre class="src src-emacs-lisp"><span class="org-comment-delimiter">;; </span><span class="org-comment">(setq org-html-htmlize-font-prefix "") ;; default</span>
+<span class="org-rainbow-delimiters-depth-1">(</span><span class="org-keyword">setq</span> org-html-htmlize-font-prefix <span class="org-string">"org-"</span><span class="org-rainbow-delimiters-depth-1">)</span>
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Example of how this theme would look like</h2>
+<div class="outline-text-2" id="text-2">
+</div><div id="outline-container-sec-2-1" class="outline-3">
+<h3 id="sec-2-1"><span class="section-number-3">2.1</span> Examples 1</h3>
+<div class="outline-text-3" id="text-2-1">
+</div><div id="outline-container-sec-2-1-1" class="outline-4">
+<h4 id="sec-2-1-1"><span class="section-number-4">2.1.1</span> Dijkstra quote about APL</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<blockquote>
+<p>
+“The competent programmer is fully aware of the strictly limited size of 
+his own skull; therefore he approaches the programming task in full 
+humility, and among other things he avoids clever tricks like the 
+plague. In the case of a well-known conversational programming 
+language I have been told from various sides that as soon as a 
+programming community is equipped with a terminal for it, a specific 
+phenomenon occurs that even has a well-established name: it is called 
+"the one-liners". It takes one of two different forms: one programmer 
+places a one-line program on the desk of another and either he proudly 
+tells what it does and adds the question "Can you code this in less 
+symbols?" —as if this were of any conceptual relevance!— or he just 
+asks "Guess what it does!". From this observation we must conclude 
+that this language as a tool is an open invitation for clever tricks; and 
+while exactly this may be the explanation for some of its appeal, viz. to 
+those who like to show how clever they are, I am sorry, but I must 
+regard this as one of the most damning things that can be said about a 
+programming language.” 
+</p>
+
+<p>
+&#x2013; Dijkstra on APL 
+</p>
+</blockquote>
+</div>
+</div>
+
+<div id="outline-container-sec-2-1-2" class="outline-4">
+<h4 id="sec-2-1-2"><span class="section-number-4">2.1.2</span> Quote from Cloud Flare</h4>
+<div class="outline-text-4" id="text-2-1-2">
+<blockquote>
+<p>
+Every technology, when sufficiently complicated, becomes
+programmable. 
+</p>
+
+<p>
+&#x2013; <a href="https://blog.cloudflare.com/introducing-cloudflare-workers/">Kenton Vardas</a> / Cloud Flare. 
+</p>
+</blockquote>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-2-2" class="outline-3">
+<h3 id="sec-2-2"><span class="section-number-3">2.2</span> Examples 2</h3>
+<div class="outline-text-3" id="text-2-2">
+</div><div id="outline-container-sec-2-2-1" class="outline-4">
+<h4 id="sec-2-2-1"><span class="section-number-4">2.2.1</span> Lorem-ipsum text</h4>
+<div class="outline-text-4" id="text-2-2-1">
+<p>
+Lorem ipsum dolor sit amet, cu mei vero quodsi bonorum. Option oblique
+ceteros nec ut, et alii eros choro sit, at has alterum commune
+incorrupte. Cu mea munere aperiri, sea nominavi apeirian mnesarchum
+ex. Te duo euripidis persecuti, corrumpit quaerendum efficiantur vel
+at, ea omnium partiendo est. Nonumes apeirian tincidunt ne his, audire
+constituto te mea, ei imperdiet contentiones cum.
+</p>
+
+<p>
+Vis ex vitae deserunt convenire. Clita expetendis honestatis vis ea,
+ea altera consetetur mel, solet bonorum maiorum ut eum. Eum ad stet
+accommodare, atqui referrentur ut nam, nam eu autem aliquam
+consequat. Postea posidonium sed ex, sumo dolorem perpetua sit
+ea. Mandamus tractatos definiebas eu eam.
+</p>
+
+<p>
+Te vocent fierent mea, te pro sale ubique, ea vocibus voluptatibus
+sea. Eu impetus molestiae pri, libris antiopam est te, ad tota
+mandamus pertinacia mea. Id eam erat adolescens. Eos mutat malis dicit
+ea. Ex pri detracto sapientem, mea ad saperet recusabo. Has ad veritus
+adversarium, sed ea nusquam placerat, nulla pericula an pro.
+</p>
+
+<p>
+Cum integre detraxit ex, clita causae copiosae pro et, id sea cetero
+partiendo. Elit pericula theophrastus ea quo, ad nec aeterno
+referrentur, eos ea aperiam voluptatibus. Sed elitr prodesset
+quaerendum an. Et his possit iudicabit intellegebat, in graeci possit
+qui.
+</p>
+
+<p>
+Maiorum delicata forensibus ei pri, commodo officiis platonem mel et,
+iusto dolore ullamcorper nec in. Usu honestatis accommodare id,
+oblique atomorum interesset no qui. Ex oporteat conclusionemque
+est. Dolor quaerendum mea an. Mei et quaeque epicurei assentior,
+iudico tempor eu vel. Animal antiopam dissentias sed eu, id vel augue
+ullamcorper.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-2-2-2" class="outline-4">
+<h4 id="sec-2-2-2"><span class="section-number-4">2.2.2</span> Quick and dirty Javascript code</h4>
+<div class="outline-text-4" id="text-2-2-2">
+<div class="org-src-container">
+
+<pre class="src src-js"><span class="org-keyword">var</span> <span class="org-variable-name">button</span> = document.createElement(<span class="org-string">"button"</span>)
+button.textContent    = <span class="org-string">"Toggle"</span>;
+button.style.top      = <span class="org-string">"20px"</span>;
+button.style.left     = <span class="org-string">"30px"</span>;
+button.style.position = <span class="org-string">"fixed"</span>;
+button.style.zIndex   = 10000;
+
+
+<span class="org-keyword">function</span> <span class="org-function-name">hideNavBar</span>(){
+    <span class="org-keyword">var</span> <span class="org-variable-name">toc</span> = document.querySelector(<span class="org-string">"#table-of-contents"</span>);
+    toc.style.display = <span class="org-string">"none"</span>;
+    document.documentElement.style.setProperty(<span class="org-string">'--main-width'</span>, <span class="org-string">'90%'</span>);
+    <span class="org-comment-delimiter">// </span><span class="org-comment">button.style.left = "10px";</span>
+}
+
+<span class="org-keyword">function</span> <span class="org-function-name">showNavBar</span>(){
+    <span class="org-keyword">var</span> <span class="org-variable-name">toc</span> = document.querySelector(<span class="org-string">"#table-of-contents"</span>);
+    toc.style.display = <span class="org-string">"block"</span>;
+    document.documentElement.style.setProperty(<span class="org-string">'--main-width'</span>, <span class="org-string">'70%'</span>);
+    <span class="org-comment-delimiter">// </span><span class="org-comment">button.style.left = "25%";</span>
+}
+
+<span class="org-keyword">var</span> <span class="org-variable-name">buttonFlag</span> = <span class="org-constant">false</span>; 
+
+button.addEventListener(<span class="org-string">"click"</span>, <span class="org-keyword">function</span>(){
+    <span class="org-keyword">if</span>(buttonFlag == <span class="org-constant">true</span>) {
+        hideNavBar();
+        buttonFlag = <span class="org-constant">false</span>;
+    } <span class="org-keyword">else</span> {
+        showNavBar();
+        buttonFlag = <span class="org-constant">true</span>;
+    }
+});
+
+
+<span class="org-keyword">var</span> <span class="org-variable-name">init</span> = <span class="org-keyword">function</span>(){
+    hideNavBar();
+    document.body.appendChild(button);
+}
+document.addEventListener(<span class="org-string">"DOMContentLoaded"</span>, init, <span class="org-constant">false</span>);
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-2-2-3" class="outline-4">
+<h4 id="sec-2-2-3"><span class="section-number-4">2.2.3</span> Bullet lists</h4>
+<div class="outline-text-4" id="text-2-2-3">
+<ul class="org-ul">
+<li>topic 1
+<ul class="org-ul">
+<li>topic 1.1
+</li>
+<li>topic 1.2
+</li>
+<li>topic 1.3
+</li>
+</ul>
+</li>
+
+<li>topic 2
+<ul class="org-ul">
+<li>topic 2.1
+</li>
+<li>topic 2.2
+</li>
+<li>topic 2.3
+</li>
+</ul>
+</li>
+
+<li>topic 3
+<ul class="org-ul">
+<li>topic 3.1
+</li>
+<li>topic 3.2
+</li>
+<li>topic 3.3
+</li>
+<li>topic 3.4
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-2-2-4" class="outline-4">
+<h4 id="sec-2-2-4"><span class="section-number-4">2.2.4</span> Topic 2.3</h4>
+</div>
+</div>
+<div id="outline-container-sec-2-3" class="outline-3">
+<h3 id="sec-2-3"><span class="section-number-3">2.3</span> Tables everywhere! Gotta love tables!</h3>
+<div class="outline-text-3" id="text-2-3">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="left">&#xa0;</th>
+<th scope="col" class="left">Signature</th>
+<th scope="col" class="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="left">ReaderT r m a</td>
+<td class="left">&#xa0;</td>
+<td class="left">Encapsulates a function or computation (a -&gt; m b) where m is a monad.</td>
+</tr>
+
+<tr>
+<td class="left">ReaderT</td>
+<td class="left">(r -&gt; m a) -&gt; ReaderT r m a</td>
+<td class="left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="left">runReaderT</td>
+<td class="left">ReaderT r m a -&gt; r -&gt; m a</td>
+<td class="left">Run computation and get its value.</td>
+</tr>
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="left">return</td>
+<td class="left">a -&gt; (ReaderT r m) a</td>
+<td class="left">Monad return function.</td>
+</tr>
+
+<tr>
+<td class="left">(&gt;&gt;=)</td>
+<td class="left">a -&gt; (ReaderT r m) b -&gt; (ReaderT r m) b</td>
+<td class="left">Monad bind function.</td>
+</tr>
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="left">fmap</td>
+<td class="left">(a -&gt; b) -&gt; (ReaderT r m) a -&gt; (ReaderT r m) b</td>
+<td class="left">Apply a function (a -&gt; b) to the result of computation Reader r a.</td>
+</tr>
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="left">ask</td>
+<td class="left">m r</td>
+<td class="left">Read environment or configuration.</td>
+</tr>
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="left">local</td>
+<td class="left">(r -&gt; r) -&gt; m a -&gt; m a</td>
+<td class="left">Modify environment by applying a function to it.</td>
+</tr>
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="left">liftIO</td>
+<td class="left">MonadIO m =&gt; IO a -&gt; m a</td>
+<td class="left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="left">liftIO</td>
+<td class="left">IO a -&gt; (Reader r m) a</td>
+<td class="left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-sec-2-4" class="outline-3">
+<h3 id="sec-2-4"><span class="section-number-3">2.4</span> C/C++ and the big picture - System Programming</h3>
+<div class="outline-text-3" id="text-2-4">
+<p>
+<b>Platform and Processors</b> 
+</p>
+
+<p>
+<span class="underline">Processors:</span>
+</p>
+
+<ul class="org-ul">
+<li>Intel - x86 (32 bits)    architecture
+</li>
+
+<li>Intel/AMD x64 (64 bits)  architecture
+</li>
+
+<li>PowerPC - Embedded systems, printers &#x2026;
+</li>
+
+<li>ARM - Processor architecture used in smartphones, tablets, security
+cameras &#x2026;
+</li>
+
+<li>AVR - Microcontroller - SOC (System On Chip) - 8 bits, 16 bits and
+32 bits. 
+</li>
+</ul>
+
+<p>
+<span class="underline">Operating Systems</span>
+</p>
+
+<ul class="org-ul">
+<li>GNU/Linux
+</li>
+
+<li>Android/Linux (Android is a modified Linux with custom basic libc
+C-library based on BSD c-lib).
+</li>
+
+<li>Windows
+</li>
+
+<li>Mac OSX
+</li>
+
+<li>FreeBSD, NetBSD, OpenBSD
+</li>
+
+<li>VxWorks - Real Time OS for Embedded Systems.
+</li>
+
+<li>QNX
+</li>
+</ul>
+
+<p>
+<span class="underline">Main APIs</span> 
+</p>
+
+<ul class="org-ul">
+<li>Unix API - Common libaries and header files in Unix-like operating
+systems like Linux, BSD variants and OSX and IOS.
+</li>
+
+<li>Windows / Windows Operating System - windows.h
+</li>
+</ul>
+
+<p>
+<b>Compilers</b>
+</p>
+
+<ul class="org-ul">
+<li>gcc (g++) - GNU C Compiler 
+</li>
+
+<li>mingw - gcc/g++ ported for Windows 
+</li>
+
+<li>clang (llvm)
+</li>
+
+<li>Microsoft C++ compiler 
+</li>
+</ul>
+
+<p>
+<b>CPP / C++ Dialects</b> 
+</p>
+
+<ul class="org-ul">
+<li>Legacy C/C++
+</li>
+
+<li>C++11
+</li>
+
+<li>C++14 
+</li>
+</ul>
+
+<p>
+<b>File Formats</b>
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption class="t-above"><span class="table-number">Table 1:</span> Reader monad transformer type signatures</caption>
+
+<colgroup>
+<col  class="left" />
+
+<col  class="left" />
+
+<col  class="left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="left">File Format</th>
+<th scope="col" class="left">Description</th>
+<th scope="col" class="left">&#xa0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left"><b>Source Code</b></td>
+<td class="left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="left">.asm</td>
+<td class="left">Assembly Source code - Used for very low level handling.</td>
+<td class="left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="left">.c</td>
+<td class="left">c-language source code</td>
+<td class="left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="left">.h</td>
+<td class="left">c-langauge header file</td>
+<td class="left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="left">.cpp</td>
+<td class="left">C++ source code</td>
+<td class="left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="left">.hpp</td>
+<td class="left">C++ header file</td>
+<td class="left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left"><b>Object Code / Compiled</b></td>
+<td class="left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="left">.o</td>
+<td class="left">Object file created before linking.</td>
+<td class="left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left"><b>Shared Libraries</b></td>
+<td class="left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="left">.dll</td>
+<td class="left">Windows shared library</td>
+<td class="left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="left">.so</td>
+<td class="left">Linux shared Library</td>
+<td class="left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="left">.dylib</td>
+<td class="left">Mac OSX shared library</td>
+<td class="left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left"><b>Exectuables</b></td>
+<td class="left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="left">.bin or any extensions</td>
+<td class="left">Linux/ Unix / OSX executables  - ELF Format</td>
+<td class="left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="left">.exe</td>
+<td class="left">Windows Executable - PE32 - Portable Executable</td>
+<td class="left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+<td class="left">&#xa0;</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-sec-2-5" class="outline-3">
+<h3 id="sec-2-5"><span class="section-number-3">2.5</span> Simple C++ program</h3>
+<div class="outline-text-3" id="text-2-5">
+<div class="org-src-container">
+
+<pre class="src src-cpp"><span class="org-comment-delimiter">/**   </span><span class="org-comment">File:      dataTypeSizes.cpp </span>
+<span class="org-comment">      Objective: Show C/C++ primitive data types sizes.      </span>
+<span class="org-comment"> */</span>
+
+<span class="org-preprocessor">#include</span> <span class="org-string">&lt;iostream&gt;</span>
+<span class="org-preprocessor">#include</span> <span class="org-string">&lt;limits&gt;</span>
+
+<span class="org-keyword">using</span> <span class="org-keyword">namespace</span> <span class="org-constant">std</span>;
+
+
+<span class="org-type">int</span> <span class="org-function-name">main</span>(){
+  <span class="org-comment-delimiter">// </span><span class="org-comment">8 bits / 1 byte numeric types</span>
+  <span class="org-comment-delimiter">//</span><span class="org-comment">---------------------------------------------------</span>
+  <span class="org-type">int</span> <span class="org-variable-name">charMin</span> = <span class="org-constant">numeric_limits</span>&lt;<span class="org-type">char</span>&gt;::min() ;
+  <span class="org-type">int</span> <span class="org-variable-name">charMax</span> = <span class="org-constant">numeric_limits</span>&lt;<span class="org-type">char</span>&gt;::max() ;
+
+  <span class="org-type">int</span> <span class="org-variable-name">scharMin</span> = <span class="org-constant">numeric_limits</span>&lt;<span class="org-type">signed</span> <span class="org-type">char</span>&gt;::min() ;
+  <span class="org-type">int</span> <span class="org-variable-name">scharMax</span> = <span class="org-constant">numeric_limits</span>&lt;<span class="org-type">signed</span> <span class="org-type">char</span>&gt;::max() ;
+
+  <span class="org-type">int</span> <span class="org-variable-name">ucharMin</span> = <span class="org-constant">numeric_limits</span>&lt;<span class="org-type">unsigned</span> <span class="org-type">char</span>&gt;::min() ;
+  <span class="org-type">int</span> <span class="org-variable-name">ucharMax</span> = <span class="org-constant">numeric_limits</span>&lt;<span class="org-type">unsigned</span> <span class="org-type">char</span>&gt;::max() ;
+
+  <span class="org-type">int</span> <span class="org-variable-name">int8Min</span>  = <span class="org-constant">numeric_limits</span>&lt;<span class="org-type">int8_t</span>&gt;::min() ;
+  <span class="org-type">int</span> <span class="org-variable-name">int8Max</span>  = <span class="org-constant">numeric_limits</span>&lt;<span class="org-type">int8_t</span>&gt;::max() ;  
+
+  <span class="org-type">int</span> <span class="org-variable-name">uint8Min</span>  = <span class="org-constant">numeric_limits</span>&lt;<span class="org-type">uint8_t</span>&gt;::min() ;
+  <span class="org-type">int</span> <span class="org-variable-name">uint8Max</span>  = <span class="org-constant">numeric_limits</span>&lt;<span class="org-type">uint8_t</span>&gt;::max() ;
+
+  <span class="org-comment-delimiter">// </span><span class="org-comment">16 bits / 2 bytes Numeric types</span>
+  <span class="org-comment-delimiter">//</span><span class="org-comment">---------------------------------------------------</span>
+
+  <span class="org-type">int</span> <span class="org-variable-name">shortMin</span>  = <span class="org-constant">numeric_limits</span>&lt;<span class="org-type">short</span>&gt;::min() ;
+  <span class="org-type">int</span> <span class="org-variable-name">shortMax</span>  = <span class="org-constant">numeric_limits</span>&lt;<span class="org-type">short</span>&gt;::max() ;
+
+  <span class="org-type">int</span> <span class="org-variable-name">ushortMin</span>  = <span class="org-constant">numeric_limits</span>&lt;<span class="org-type">unsigned</span> <span class="org-type">short</span>&gt;::min() ;
+  <span class="org-type">int</span> <span class="org-variable-name">ushortMax</span>  = <span class="org-constant">numeric_limits</span>&lt;<span class="org-type">unsigned</span> <span class="org-type">short</span>&gt;::max() ;
+
+  <span class="org-type">int</span> <span class="org-variable-name">int16Min</span>  = <span class="org-constant">numeric_limits</span>&lt;<span class="org-type">int16_t</span>&gt;::min() ;
+  <span class="org-type">int</span> <span class="org-variable-name">int16Max</span>  = <span class="org-constant">numeric_limits</span>&lt;<span class="org-type">int16_t</span>&gt;::max() ;  
+
+  <span class="org-type">int</span> <span class="org-variable-name">uint16Min</span>  = <span class="org-constant">numeric_limits</span>&lt;<span class="org-type">uint16_t</span>&gt;::min() ;
+  <span class="org-type">int</span> <span class="org-variable-name">uint16Max</span>  = <span class="org-constant">numeric_limits</span>&lt;<span class="org-type">uint16_t</span>&gt;::max() ;  
+
+  <span class="org-comment-delimiter">// </span><span class="org-comment">32 bits / 4 bytes Numeric types</span>
+  <span class="org-comment-delimiter">//</span><span class="org-comment">---------------------------------------------------</span>
+
+  <span class="org-type">int</span> <span class="org-variable-name">intMin</span>  = <span class="org-constant">numeric_limits</span>&lt;<span class="org-type">int</span>&gt;::min() ;
+  <span class="org-type">int</span> <span class="org-variable-name">intMax</span>  = <span class="org-constant">numeric_limits</span>&lt;<span class="org-type">int</span>&gt;::max() ;  
+
+  cout &lt;&lt; <span class="org-string">"C/C++ Data type sizes in number of bytes (1 byte = 8 bits)"</span> &lt;&lt; endl;
+
+  cout &lt;&lt; <span class="org-string">"\n1 byte / 8 bits Data types"</span>                       &lt;&lt; endl;
+  cout &lt;&lt;  <span class="org-string">"------------------------------------"</span>              &lt;&lt; endl; 
+  cout &lt;&lt; <span class="org-string">"sizeof(char)          = "</span> &lt;&lt; <span class="org-keyword">sizeof</span>(<span class="org-type">char</span>)           &lt;&lt; <span class="org-string">" min = "</span> &lt;&lt; charMin  &lt;&lt; <span class="org-string">" max = "</span> &lt;&lt; charMax &lt;&lt; endl; 
+  cout &lt;&lt; <span class="org-string">"sizeof(signed char)   = "</span> &lt;&lt; <span class="org-keyword">sizeof</span>(<span class="org-type">signed</span> <span class="org-type">char</span>)    &lt;&lt; <span class="org-string">" min = "</span> &lt;&lt; scharMin &lt;&lt; <span class="org-string">" max = "</span> &lt;&lt; scharMax &lt;&lt; endl; 
+  cout &lt;&lt; <span class="org-string">"sizeof(unsigned char) = "</span> &lt;&lt; <span class="org-keyword">sizeof</span>(<span class="org-type">unsigned</span> <span class="org-type">char</span>)  &lt;&lt; <span class="org-string">" min = "</span> &lt;&lt; ucharMin &lt;&lt; <span class="org-string">" max = "</span> &lt;&lt; ucharMax &lt;&lt; endl; 
+  cout &lt;&lt; <span class="org-string">"sizeof(int8_t)        = "</span> &lt;&lt; <span class="org-keyword">sizeof</span>(int8_t)         &lt;&lt; <span class="org-string">" min = "</span> &lt;&lt; int8Min  &lt;&lt; <span class="org-string">" max = "</span> &lt;&lt; int8Max &lt;&lt; endl; 
+  cout &lt;&lt; <span class="org-string">"sizeof(uint8_t)       = "</span> &lt;&lt; <span class="org-keyword">sizeof</span>(uint8_t)        &lt;&lt; <span class="org-string">" min = "</span> &lt;&lt; uint8Min &lt;&lt; <span class="org-string">" max = "</span> &lt;&lt; uint8Max &lt;&lt; endl; 
+
+  cout &lt;&lt; <span class="org-string">"\n2 bytes / 16 bits Data types"</span>                     &lt;&lt; endl;  
+  cout &lt;&lt;  <span class="org-string">"------------------------------------"</span>              &lt;&lt; endl;   
+  cout &lt;&lt; <span class="org-string">"sizeof(short)         = "</span> &lt;&lt; <span class="org-keyword">sizeof</span>(<span class="org-type">short</span>)          &lt;&lt; <span class="org-string">" min = "</span> &lt;&lt; shortMin  &lt;&lt; <span class="org-string">" max = "</span> &lt;&lt; shortMax  &lt;&lt; endl; 
+  cout &lt;&lt; <span class="org-string">"sizeof(usigned short) = "</span> &lt;&lt; <span class="org-keyword">sizeof</span>(<span class="org-type">unsigned</span> <span class="org-type">short</span>) &lt;&lt; <span class="org-string">" min = "</span> &lt;&lt; ushortMin &lt;&lt; <span class="org-string">" max = "</span> &lt;&lt; ushortMax &lt;&lt; endl; 
+  cout &lt;&lt; <span class="org-string">"sizeof(int16_t)       = "</span> &lt;&lt; <span class="org-keyword">sizeof</span>(int16_t)        &lt;&lt; <span class="org-string">" min = "</span> &lt;&lt; int16Min  &lt;&lt; <span class="org-string">" max = "</span> &lt;&lt; int16Max  &lt;&lt; endl;  
+  cout &lt;&lt; <span class="org-string">"sizeof(uint16_t)      = "</span> &lt;&lt; <span class="org-keyword">sizeof</span>(uint16_t)       &lt;&lt; <span class="org-string">" min = "</span> &lt;&lt; uint16Min &lt;&lt; <span class="org-string">" max = "</span> &lt;&lt; uint16Max &lt;&lt; endl;  
+
+  cout &lt;&lt; <span class="org-string">"\n4 bytes / 32 bits Data types"</span>                    &lt;&lt; endl;  
+  cout &lt;&lt;  <span class="org-string">"------------------------------------"</span>             &lt;&lt; endl;   
+  cout &lt;&lt; <span class="org-string">"sizeof(int)           = "</span> &lt;&lt; <span class="org-keyword">sizeof</span>(<span class="org-type">int</span>)           &lt;&lt; <span class="org-string">" min = "</span> &lt;&lt; intMin &lt;&lt; <span class="org-string">" max = "</span> &lt;&lt; intMax &lt;&lt; endl;  
+  cout &lt;&lt; <span class="org-string">"sizeof(int32_t)       = "</span> &lt;&lt; <span class="org-keyword">sizeof</span>(int32_t)       &lt;&lt; endl;
+  cout &lt;&lt; <span class="org-string">"sizeof(int64_t)       = "</span> &lt;&lt; <span class="org-keyword">sizeof</span>(int64_t)       &lt;&lt; endl;
+
+  cout &lt;&lt; <span class="org-string">"sizeof(float)         = "</span> &lt;&lt; <span class="org-keyword">sizeof</span>(<span class="org-type">float</span>)         &lt;&lt; endl;  
+    cout &lt;&lt; <span class="org-string">"\n8 bytes / 64 bits Data types"</span>                    &lt;&lt; endl;  
+  cout &lt;&lt;  <span class="org-string">"------------------------------------"</span>             &lt;&lt; endl;    
+  cout &lt;&lt; <span class="org-string">"sizeof(long)          = "</span> &lt;&lt; <span class="org-keyword">sizeof</span>(<span class="org-type">long</span>)          &lt;&lt; endl;
+  cout &lt;&lt; <span class="org-string">"sizeof(long long)     = "</span> &lt;&lt; <span class="org-keyword">sizeof</span>(<span class="org-type">long</span> <span class="org-type">long</span>)     &lt;&lt; endl;    
+  cout &lt;&lt; <span class="org-string">"sizeof(double)        = "</span> &lt;&lt; <span class="org-keyword">sizeof</span>(<span class="org-type">double</span>)        &lt;&lt; endl;  
+
+  <span class="org-keyword">return</span> 0;
+}
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Caio Rodrigues Soares Silva</p>
+<p class="date">Created: 2017-11-06 Mon 16:57</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.3.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
