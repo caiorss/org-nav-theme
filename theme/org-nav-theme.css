@@ -179,9 +179,11 @@ table {
 }
 
 th {
+    background-color: black;
+    color: white;
     /* padding-top: 30px; */
     font-weight: bold;
-    background-color: #93A5BB;
+
     /* text-align: justified; */
 }
 
