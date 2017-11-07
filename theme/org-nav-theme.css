@@ -140,6 +140,23 @@ caption {
         word-wrap: break-word;
 
     }
+
+   p {
+       text-indent: 25px;
+       text-align:  justify;
+       line-height: 1.5;
+       max-width:   100%;
+
+       -moz-osx-font-smoothing: grayscale;
+       -webkit-font-smoothing: antialiased !important;
+       -moz-font-smoothing: antialiased !important;
+       text-rendering: optimizelegibility !important;
+       letter-spacing: .03em;
+
+       font-family: 'Merriweather', Georgia, 'Times New Roman', Times, serif;
+   }
+
+    
     
    #permalink_section
    {
@@ -246,6 +263,22 @@ caption {
         word-wrap: break-word;
 
     }
+
+   p {
+       text-indent: 25px;
+       text-align:  justify;
+       line-height: 1.5;
+       max-width:   100%;
+
+       -moz-osx-font-smoothing: grayscale;
+       -webkit-font-smoothing: antialiased !important;
+       -moz-font-smoothing: antialiased !important;
+       text-rendering: optimizelegibility !important;
+       letter-spacing: .03em;
+
+       font-family: 'Merriweather', Georgia, 'Times New Roman', Times, serif;
+   }
+    
     
    #permalink_section
    {
