@@ -244,7 +244,8 @@ caption {
         /* float:            right; */
         /* position:         relative; */
         /* width:            var(--main-width); */
-        margin-left:     300px;
+        margin-left:     200px;
+        margin-right:    200px;
         padding-left:    100px;
         padding-right:   50px;
         /* overflow-x:       scroll; */
