@@ -477,14 +477,15 @@ caption {
 
     /* ======== Table ================================== */
 
-    table {
-        border-collapse: collapse;
-        border-spacing:  0;
-        width:           90%;
-        margin-top:      20px;
-        margin-bottom:   20px;
+   table {
+       font-size: 10pt;
+       border-collapse: collapse;
+       border-spacing:  0;
+       width:           90%;
+       margin-top:      20px;
+       margin-bottom:   20px;
 
-        background-color: lavender;
+       background-color: lavender;
     }
 
     th {
