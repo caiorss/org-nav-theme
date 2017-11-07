@@ -14,12 +14,15 @@
 
 :root {
 
-    /** Table of contents settings */
-    --toc-width:   230px;        
-    --toc-bgcolor:  lightcyan;
+    /** ====== Table of contents settings ===== */
 
+    --toc-width:   230px;        
+    --toc-bgcolor:  #faf9dc;
+
+
+    /** ====== Body Settings =================== */
     
-    /** Content lenght */
+    /** Content length */
     --main-width: 90%;
 
     --header-color:  #1572AE;
@@ -50,13 +53,22 @@ ul#tabs, h2, h3, h4, h5 {
     font-family: "Trebuchet MS",Verdana,sans-serif;
 }
 
-h3, h4, h5, h6 {
-    color: #1572AE;
+h2, h3, h4, h5, h6 {
+    color:  #0075a2;
 }
 
 h2 {
-    color: #3c4c6c;
+    border-bottom: 4px solid #0075a2;
 }
+
+
+h3 {
+    border-bottom: 1px solid #0075a2;
+}
+
+/* h2 { */
+/*     color: #3c4c6c; */
+/* } */
 
 
 /** Hyperlink General Styles */
@@ -74,15 +86,24 @@ a {
 }
 
 
+html {
+    margin-left: 20px;
+    background-color: black;
+
+}
+
 body {
+    
     font:           16px/1.385 arial,helvetica,clean,sans-serif;
     text-rendering: optimizeLegibility;
 
     /* margin-left:  50%; */
-    float:            right;
+    /* float:            right; */
     /* position:         relative; */
     /* width:            var(--main-width); */
     margin-left:     300px;
+    padding-left:    100px;
+    padding-right:   50px;
     /* overflow-x:       scroll; */
     background-color:  var(--bodyBgColor); /* rgba(255,255,255,1.0); */
     /* z-index:          9999; */
@@ -90,7 +111,7 @@ body {
 
 
 #table-of-contents {
-    background-color: rgb(231, 246, 239);
+    background-color: var(--toc-bgcolor);
     /* border-color: #CCCCCC #BBBBBB #888888; */
     /* background-image: linear-gradient(to bottom, #7b0105 0%, #b8282c 100%); */
     
