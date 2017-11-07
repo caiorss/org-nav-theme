@@ -37,6 +37,12 @@
 
     /** Body background color - Usef #fff for white. */
     --bodyBgColor: white; /* #f2f2f2; */
+
+
+    /** ====== Mobile Layout Settings =================== */
+
+    --mobile-font-size: 8pt;
+    
 }
 
 html {
@@ -200,7 +206,8 @@ caption {
 
     pre {
         font-family: "Operator Mono SSm A", "Operator Mono SSm B", 'Source Code Pro', Menlo, Consolas, Monaco, monospace;
-
+        font-size: var(--mobile-font-size);
+        
         white-space: pre-wrap;
         /* word-wrap: break-word; */
         text-align: justify;
@@ -322,6 +329,8 @@ caption {
 
     pre {
         font-family: "Operator Mono SSm A", "Operator Mono SSm B", 'Source Code Pro', Menlo, Consolas, Monaco, monospace;
+
+        font-size: var(--mobile-font-size);
 
         white-space: pre-wrap;
         /* word-wrap: break-word; */
