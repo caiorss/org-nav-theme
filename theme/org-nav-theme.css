@@ -23,7 +23,7 @@
     /** ====== Body Settings =================== */
     
     /** Content length */
-    --main-width: 90%;
+    --main-width: 800px;
 
     --header-color:  #1572AE;
 
@@ -372,10 +372,10 @@ caption {
         /* margin-left:  50%; */
         /* float:            right; */
         /* position:         relative; */
-        /* width:            var(--main-width); */
-        margin-left:     200px;
-        margin-right:    200px;
-        padding-left:    100px;
+        width:            var(--main-width);
+        margin-left:     10pxpx;
+        /* margin-right:    200px; */
+        padding-left:    20px;
         padding-right:   50px;
         /* overflow-x:       scroll; */
         background-color:  var(--bodyBgColor); /* rgba(255,255,255,1.0); */
