@@ -328,10 +328,10 @@ caption {
         margin-left: 20px;
         background-color: black;
     }
-
-
     
     body {
+
+        border-radius:  20px;
 
         font:           16px/1.385 arial,helvetica,clean,sans-serif;
         text-rendering: optimizeLegibility;
