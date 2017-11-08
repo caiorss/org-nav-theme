@@ -111,6 +111,51 @@ caption {
 }
 
 
+ul {
+    padding-left: 0px;
+    padding-top:  5px;
+    padding-bottom: 10px;
+    list-style-position: inside;
+}
+
+
+li {
+    padding-left: 5px;
+    padding-top:   4px;
+    font-size:    14px;
+}
+
+
+
+#table-of-contents ul {
+    padding-left: 0px;
+    padding-top:  5px;
+    padding-bottom: 10px;
+    list-style-type:     none;
+    list-style-position: inside;
+}
+
+#table-of-contents li {
+    padding-left: 10px;
+    padding-top:   4px;
+    font-size:    14px;
+}
+
+#table-of-contents  a {
+    /* color:          rgba(0,0,0,1); */
+    /* font-weight:    700; */
+    color:          rgb(11, 83, 149);
+    position:       relative;
+    text-overflow:  ellipsis;
+}
+
+#table-of-contents a:hover {
+    color:            rgba(51,102,204,1.0);
+    text-decoration:  underline;
+}
+
+
+
 
 /* ------------------------------------- 
    -         Mobile Styles             -
@@ -387,9 +432,6 @@ caption {
         font:           16px/1.385 arial,helvetica,clean,sans-serif;
         text-rendering: optimizeLegibility;
 
-        /* margin-left:  50%; */
-        /* float:            right; */
-        /* position:         relative; */
         width:            var(--main-width);
         margin-left:     10pxpx;
         /* margin-right:    200px; */
@@ -429,32 +471,6 @@ caption {
 
 
 
-     #table-of-contents ul {
-         padding-left: 0px;
-         padding-top:  5px;
-         padding-bottom: 10px;
-         list-style-type:     none;
-         list-style-position: inside;
-     }
-
-     #table-of-contents li {
-         padding-left: 10px;
-         padding-top:   4px;
-         font-size:    14px;
-     }
-
-     #table-of-contents  a {
-         /* color:          rgba(0,0,0,1); */
-         /* font-weight:    700; */
-         color:          rgb(11, 83, 149);
-         position:       relative;
-         text-overflow:  ellipsis;
-     }
-
-     #table-of-contents a:hover {
-         color:            rgba(51,102,204,1.0);
-         text-decoration:  underline;
-     }
 
     img{
         width:     100%;
