@@ -39,9 +39,10 @@
     --bodyBgColor: white; /* #f2f2f2; */
 
 
-    /** ====== Mobile Layout Settings =================== */
+  /** ====== Mobile Layout Settings =================== */
 
-    --mobile-font-size: 8pt;
+   /** Font size used to make tables and code blocks (pre tag) fit in mobile screen. */
+  --small-font-size: 8pt;
     
 }
 
@@ -111,7 +112,7 @@ caption {
 
 
 
-/* -------------------------------------
+/* ------------------------------------- 
    -         Mobile Styles             -
    -------------------------------------
 */
@@ -186,6 +187,8 @@ caption {
         margin-bottom:   20px;
 
         background-color: lavender;
+
+        font-size: var(--small-font-size);
     }
 
     th {
@@ -209,7 +212,7 @@ caption {
 
     pre {
         font-family: "Operator Mono SSm A", "Operator Mono SSm B", 'Source Code Pro', Menlo, Consolas, Monaco, monospace;
-        font-size: var(--mobile-font-size);
+        font-size:   var(--small-font-size);
         
         white-space: pre-wrap;
         /* word-wrap: break-word; */
@@ -239,7 +242,7 @@ caption {
 }
 
 
-/* -------------------------------------
+/* ------------------------------------- 
    -         Mobile Styles             -
    -------------------------------------
 */
@@ -336,7 +339,7 @@ caption {
     pre {
         font-family: "Operator Mono SSm A", "Operator Mono SSm B", 'Source Code Pro', Menlo, Consolas, Monaco, monospace;
 
-        font-size: var(--mobile-font-size);
+        font-size: var(--small-font-size);
 
         white-space: pre-wrap;
         /* word-wrap: break-word; */
