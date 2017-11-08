@@ -33,7 +33,7 @@
     --max-text-width: 90%;  /* Max paragraph length and text in bullet lists. */
 
     /** Color of hyperlinks at the body. tag <a> */
-    --linkcolor: #17a81a;  /* #007bb8; */
+    --linkcolor: #000099;  /* #007bb8; */
 
     /** Body background color - Usef #fff for white. */
     --bodyBgColor: white; /* #f2f2f2; */
