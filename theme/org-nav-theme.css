@@ -1,12 +1,15 @@
 /**
-    - Author: Caio Rodrigues Soares Silva
+ -----------------------------------------------------------------------------
 
-    - Public Domain CSS Style for org-mode.
+ - Author: Caio Rodrigues Soares Silva
 
-    - Description: CSS for long-org mode documents exported to html with long table of contents.
-                   This style creates a scrollable table of contents at the left side.
+ - Public Domain CSS Style for org-mode. Use at will!!
 
-   ----------------------------------------------------------------------------------------
+ - Description: CSS for long-org mode documents exported to html with
+   long table of contents.  This style creates a scrollable table of
+   contents at the left side.
+
+ ------------------------------------------------------------------------------
 */
 
 
@@ -16,14 +19,14 @@
 
     /** ====== Table of contents settings ===== */
 
-    --toc-width:   230px;        
+    --toc-width:    270px;        
     --toc-bgcolor:  #faf9dc;
 
 
     /** ====== Body Settings =================== */
     
     /** Content length */
-    --main-width: 800px;
+    --main-width:    760px;
 
     --header-color:  #1572AE;
 
@@ -112,9 +115,9 @@ caption {
 
 
 ul {
-    padding-left: 0px;
-    padding-top:  5px;
-    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-top:  0px;
+    padding-bottom: 0px;
     list-style-position: inside;
 }
 
@@ -427,13 +430,18 @@ li {
     
     body {
 
+        /* position: fixed; */
+
+        margin-top:     50px;
+        overflow: auto;
+
         border-radius:  20px;
 
         font:           16px/1.385 arial,helvetica,clean,sans-serif;
         text-rendering: optimizeLegibility;
 
         width:            var(--main-width);
-        margin-left:     10pxpx;
+        margin-left:     30px;
         /* margin-right:    200px; */
         padding-left:    20px;
         padding-right:   50px;
@@ -444,29 +452,35 @@ li {
 
 
     #table-of-contents {
-        background-color: var(--toc-bgcolor);
-        /* border-color: #CCCCCC #BBBBBB #888888; */
-        /* background-image: linear-gradient(to bottom, #7b0105 0%, #b8282c 100%); */
-
-        color: var(--header-color);    
-        width: var(--toc-width);
+        top:    50px;
+        left:   900px;
+        width:  var(--toc-width);        
         height: 100%;
+        overflow-y: scroll;
+        
+        background-color: var(--toc-bgcolor);
+        color: var(--header-color);    
+        
         float: left;
         position: fixed;
-        top:   50px;
+
         bottom: 0;
-        left: 0;
-        /* background-color: rgba(125, 125, 125, 0.29); */
-        overflow-y: scroll;
+       
+        /* background-color: rgba(125, 125, 125, 0.29); */       
+
         display: block;
         z-index: 9999;
 
         /** Initially hide navigation bar*/
-        display: none;
+        display: block;
 
         text-align: left;
 
         font-family: "Segoe UI", Segoe, Calibri, "Nimbus Sans L", "Ubuntu", Tahoma, Arial, Helvetica, Verdana, sans-serif;
+    }
+
+    #text-table-of-contents {
+        display: block;
     }
 
 
