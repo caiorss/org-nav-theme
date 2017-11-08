@@ -1,12 +1,15 @@
 /**
-    - Author: Caio Rodrigues Soares Silva
+ -----------------------------------------------------------------------------
 
-    - Public Domain CSS Style for org-mode.
+ - Author: Caio Rodrigues Soares Silva
 
-    - Description: CSS for long-org mode documents exported to html with long table of contents.
-                   This style creates a scrollable table of contents at the left side.
+ - Public Domain CSS Style for org-mode. Use at will!!
 
-   ----------------------------------------------------------------------------------------
+ - Description: CSS for long-org mode documents exported to html with
+   long table of contents.  This style creates a scrollable table of
+   contents at the left side.
+
+ ------------------------------------------------------------------------------
 */
 
 
@@ -16,14 +19,14 @@
 
     /** ====== Table of contents settings ===== */
 
-    --toc-width:   230px;        
+    --toc-width:    270px;        
     --toc-bgcolor:  #faf9dc;
 
 
     /** ====== Body Settings =================== */
     
     /** Content length */
-    --main-width: 90%;
+    --main-width:    760px;
 
     --header-color:  #1572AE;
 
@@ -33,12 +36,23 @@
     --max-text-width: 90%;  /* Max paragraph length and text in bullet lists. */
 
     /** Color of hyperlinks at the body. tag <a> */
-    --linkcolor: #17a81a;  /* #007bb8; */
+    --linkcolor: #000099;  /* #007bb8; */
 
     /** Body background color - Usef #fff for white. */
     --bodyBgColor: white; /* #f2f2f2; */
+
+
+  /** ====== Mobile Layout Settings =================== */
+
+   /** Font size used to make tables and code blocks (pre tag) fit in mobile screen. */
+  --small-font-size: 8pt;
+    
 }
 
+html {
+    font-size: 100%;
+}
+    
 
 
 h1 {
@@ -66,10 +80,6 @@ h3 {
     border-bottom: 1px solid #0075a2;
 }
 
-/* h2 { */
-/*     color: #3c4c6c; */
-/* } */
-
 
 /** Hyperlink General Styles */
 a {
@@ -86,55 +96,38 @@ a {
 }
 
 
-html {
-    margin-left: 20px;
-    background-color: black;
-
-}
-
-body {
-    
-    font:           16px/1.385 arial,helvetica,clean,sans-serif;
-    text-rendering: optimizeLegibility;
-
-    /* margin-left:  50%; */
-    /* float:            right; */
-    /* position:         relative; */
-    /* width:            var(--main-width); */
-    margin-left:     300px;
-    padding-left:    100px;
-    padding-right:   50px;
-    /* overflow-x:       scroll; */
-    background-color:  var(--bodyBgColor); /* rgba(255,255,255,1.0); */
-    /* z-index:          9999; */
-}
 
 
-#table-of-contents {
-    background-color: var(--toc-bgcolor);
-    /* border-color: #CCCCCC #BBBBBB #888888; */
-    /* background-image: linear-gradient(to bottom, #7b0105 0%, #b8282c 100%); */
-    
-    color: var(--header-color);    
-    width: var(--toc-width);
-    height: 100%;
-    float: left;
-    position: fixed;
-    top:   50px;
-    bottom: 0;
-    left: 0;
-    /* background-color: rgba(125, 125, 125, 0.29); */
-    overflow-y: scroll;
-    display: block;
-    z-index: 9999;
+/* ======== Paragraph formatting =================== */
 
-    /** Initially hide navigation bar*/
-    display: none;
 
+
+
+/** Align table caption to the left. */
+caption {
     text-align: left;
-
-    font-family: "Segoe UI", Segoe, Calibri, "Nimbus Sans L", "Ubuntu", Tahoma, Arial, Helvetica, Verdana, sans-serif;
 }
+
+/** Align picture caption to the left. */
+.figure p {
+    text-align: left;
+}
+
+
+ul {
+    padding-left: 5px;
+    padding-top:  0px;
+    padding-bottom: 0px;
+    list-style-position: inside;
+}
+
+
+li {
+    padding-left: 5px;
+    padding-top:   4px;
+    font-size:    14px;
+}
+
 
 
 #table-of-contents ul {
@@ -165,69 +158,568 @@ body {
 }
 
 
-/* ======== Paragraph formatting =================== */
 
-p {
-    text-indent: 25px;
-    text-align:  justify;
-    line-height: 1.5;
-    width:       var(--max-text-width);
 
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased !important;
-    -moz-font-smoothing: antialiased !important;
-    text-rendering: optimizelegibility !important;
-    letter-spacing: .03em;
+/* ------------------------------------- 
+   -         Mobile Styles             -
+   -------------------------------------
+*/
+@media only screen and (max-width: 400px) {
 
-    font-family: 'Merriweather', Georgia, 'Times New Roman', Times, serif;
+
+    #content {
+        top:          0;
+        margin-top:   60px;
+        font-size:    1rem;
+        width:        100%;      
+        background-color:  var(--bodyBgColor);
+        -webkit-text-size-adjust: none;
+
+        height:      100%;
+        overflow-y:  scroll;
+        
+        /* float:     bottom; */
+        position:  fixed;
+
+        display:   block;
+
+        padding-bottom:60px;
+    }
+
+
+    #postamble {
+        /* top:          60px; */
+        /* margin-top:   60px; */
+        font-size:    1rem;
+        width:        100%;      
+        background-color:  var(--bodyBgColor);
+        -webkit-text-size-adjust: none;
+
+        height:      100%;
+        /* margin: 0 auto -142px; */
+        
+        /* float:     bottom; */
+        /* position:  fixed; */
+        /* float: bottom; */
+      
+        position:  relative;
+        bottom:   0;
+        /* display:  table-footer-group; */
+        display: none;
+    }
+
+    
+    #table-of-contents {
+        top:    0px;       
+        width:  var(--toc-width);        
+        height: 50px;
+        width:  100%;        
+        overflow-y: hidden;
+        
+        background-color: var(--toc-bgcolor);
+        color: var(--header-color);    
+        
+        float: left;
+        position: fixed;
+
+        bottom: 0;
+       
+        /* background-color: rgba(125, 125, 125, 0.29); */       
+
+        display: block;
+        z-index: 9999;
+
+        text-align: left;
+
+        
+    }
+
+    #table-of-contents h2 {
+        display: block:
+        height:  50px;
+    }
+
+    #table-of-contents a {
+        display: block;
+        /* width:   100px; */
+        height:  40px;
+    }
+
+
+    
+    img {
+        max-width: 100%;
+        height:    auto;
+    }
+
+    .ellipsis {
+        text-overflow: ellipsis;
+
+        /* Required for text-overflow to do anything */
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    a {
+        text-overflow: ellipsis;
+
+        /* Required for text-overflow to do anything */
+        white-space: nowrap;
+        white-space: pre-wrap;
+        /* overflow: hidden; */
+        word-wrap: break-word;
+
+    }
+
+   p {
+       text-indent: 25px;
+       text-align:  justify;
+       line-height: 1.5;
+       max-width:   100%;
+
+       -moz-osx-font-smoothing: grayscale;
+       -webkit-font-smoothing: antialiased !important;
+       -moz-font-smoothing: antialiased !important;
+       text-rendering: optimizelegibility !important;
+       letter-spacing: .03em;
+
+       font-family: 'Merriweather', Georgia, 'Times New Roman', Times, serif;
+   }
+
+    
+    
+   #permalink_section
+   {
+       white-space: pre-wrap; /* css-3 */    
+       white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+       white-space: -pre-wrap; /* Opera 4-6 */    
+       white-space: -o-pre-wrap; /* Opera 7 */    
+       word-wrap: break-word; /* Internet Explorer 5.5+ */
+   }
+
+    
+
+    table {
+        border-collapse: collapse;
+        border-spacing:  0;
+        width:           100%;
+        margin-top:      20px;
+        margin-bottom:   20px;
+
+        background-color: lavender;
+
+        font-size: var(--small-font-size);
+    }
+
+    th {
+        background-color: black;
+        color: white;
+        /* padding-top: 30px; */
+        font-weight: bold;
+
+        /* text-align: justified; */
+    }
+
+    th.left {
+        text-align: left;
+    }
+
+    td,th {
+        padding: 0;
+        /* width: 100%; */
+    }
+
+
+    pre {
+        font-family: "Operator Mono SSm A", "Operator Mono SSm B", 'Source Code Pro', Menlo, Consolas, Monaco, monospace;
+        font-size:   var(--small-font-size);
+        
+        white-space: pre-wrap;
+        /* word-wrap: break-word; */
+        text-align: justify;
+
+        /* qfont-size: 10pt; */
+
+        /* background-color:#292929; */
+        background-color: #e4eadb;
+        filter: invert(90%); 
+
+        display: block;
+  
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        max-width:  100%;
+
+        border-radius: 16px;
+        /* border: 1px solid #777; */
+        box-sizing:border-box;
+        /* text-shadow:0px 1px 2px rgba(0,0,0,0.4) */
+
+        overflow-x: scroll;
+    }    
+    
 }
 
-/* ======== Image ================================== */
 
-img{
-    width:     100%;
-    max-width: var(--max-image-width);
+/* ------------------------------------- 
+   -         Tablet Styles             -
+   -------------------------------------
+*/
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+
+
+    #content {
+        top:          0;
+        margin-top:   60px;
+        font-size:    1rem;
+        width:        100%;      
+        background-color:  var(--bodyBgColor);
+        -webkit-text-size-adjust: none;
+
+        height:      100%;
+        overflow-y:  scroll;
+        
+        /* float:     bottom; */
+        position:  fixed;
+
+        display:   block;
+
+        padding-bottom:60px;
+    }
+
+
+    #postamble {
+        /* top:          60px; */
+        /* margin-top:   60px; */
+        font-size:    1rem;
+        width:        100%;      
+        background-color:  var(--bodyBgColor);
+        -webkit-text-size-adjust: none;
+
+        height:      100%;
+        /* margin: 0 auto -142px; */
+        
+        /* float:     bottom; */
+        /* position:  fixed; */
+        /* float: bottom; */
+      
+        position:  relative;
+        bottom:   0;
+        /* display:  table-footer-group; */
+        display: none;
+    }
+
+    
+    #table-of-contents {
+        top:    0px;       
+        width:  var(--toc-width);        
+        height: 50px;
+        width:  100%;        
+        overflow-y: hidden;
+        
+        background-color: var(--toc-bgcolor);
+        color: var(--header-color);    
+        
+        float: left;
+        position: fixed;
+
+        bottom: 0;
+       
+        /* background-color: rgba(125, 125, 125, 0.29); */       
+
+        display: block;
+        z-index: 9999;
+
+        text-align: left;        
+    }
+
+    #table-of-contents h2 {
+        display: block:
+        height:  50px;
+    }
+    
+    #table-of-contents a {
+        display: block;
+        /* width:   100px; */
+        height:  40px;
+    }
+
+  
+    img {
+        max-width: 100%;
+        height:    auto;
+    }
+
+    .ellipsis {
+        text-overflow: ellipsis;
+
+        /* Required for text-overflow to do anything */
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    a {
+        text-overflow: ellipsis;
+
+        /* Required for text-overflow to do anything */
+        white-space: nowrap;
+        white-space: pre-wrap;
+        /* overflow: hidden; */
+        word-wrap: break-word;
+
+    }
+
+   p {
+       text-indent: 25px;
+       text-align:  justify;
+       line-height: 1.5;
+       max-width:   100%;
+
+       -moz-osx-font-smoothing: grayscale;
+       -webkit-font-smoothing: antialiased !important;
+       -moz-font-smoothing: antialiased !important;
+       text-rendering: optimizelegibility !important;
+       letter-spacing: .03em;
+
+       font-family: 'Merriweather', Georgia, 'Times New Roman', Times, serif;
+   }
+
+    
+    
+   #permalink_section
+   {
+       white-space: pre-wrap; /* css-3 */    
+       white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+       white-space: -pre-wrap; /* Opera 4-6 */    
+       white-space: -o-pre-wrap; /* Opera 7 */    
+       word-wrap: break-word; /* Internet Explorer 5.5+ */
+   }
+
+    
+
+    table {
+        border-collapse: collapse;
+        border-spacing:  0;
+        width:           100%;
+        margin-top:      20px;
+        margin-bottom:   20px;
+
+        background-color: lavender;
+
+        font-size: var(--small-font-size);
+    }
+
+    th {
+        background-color: black;
+        color: white;
+        /* padding-top: 30px; */
+        font-weight: bold;
+
+        /* text-align: justified; */
+    }
+
+    th.left {
+        text-align: left;
+    }
+
+    td,th {
+        padding: 0;
+        /* width: 100%; */
+    }
+
+
+    pre {
+        font-family: "Operator Mono SSm A", "Operator Mono SSm B", 'Source Code Pro', Menlo, Consolas, Monaco, monospace;
+        font-size:   var(--small-font-size);
+        
+        white-space: pre-wrap;
+        /* word-wrap: break-word; */
+        text-align: justify;
+
+        /* qfont-size: 10pt; */
+
+        /* background-color:#292929; */
+        background-color: #e4eadb;
+        filter: invert(90%); 
+
+        display: block;
+  
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        max-width:  100%;
+
+        border-radius: 16px;
+        /* border: 1px solid #777; */
+        box-sizing:border-box;
+        /* text-shadow:0px 1px 2px rgba(0,0,0,0.4) */
+
+        overflow-x: scroll;
+    }        
+
 }
 
-/* ======== Table ================================== */
 
-table {
-	border-collapse: collapse;
-	border-spacing:  0;
-    width:           90%;
-    margin-top:      20px;
-    margin-bottom:   20px;
+/* ------------------------------------- 
+   -         Desktop Styles            -
+   -------------------------------------
+*/
+@media only screen and (min-width: 961px) {
 
-    background-color: lavender;
-}
+    html {
+        background-color: black;
+    }
+    
+    body {
 
-th {
-    background-color: black;
-    color: white;
-    /* padding-top: 30px; */
-    font-weight: bold;
+        /* position: fixed; */
+        margin-top:     50px;
+        
 
-    /* text-align: justified; */
-}
+        border-radius:  20px;
 
-th.left {
-    text-align: left;
-}
+        font:           16px/1.385 arial,helvetica,clean,sans-serif;
+        text-rendering: optimizeLegibility;
 
-td,th {
-	padding: 0;
-    /* width: 100%; */
-}
+        width:            var(--main-width);
+        margin-left:     30px;
+        /* margin-right:    200px; */
+        padding-left:    20px;
+        padding-right:   50px;
+        /* overflow-x:       scroll; */
+        background-color:  var(--bodyBgColor); /* rgba(255,255,255,1.0); */
+        /* z-index:          9999; */
+    }
 
-/** Align table caption to the left. */
-caption {
-    text-align: left;
-}
 
-/** Align picture caption to the left. */
-.figure p {
-    text-align: left;
-}
+    #table-of-contents {
+        top:    50px;
+        left:   900px;
+        width:  var(--toc-width);        
+        height: 100%;
+        overflow-y: scroll;
+        
+        background-color: var(--toc-bgcolor);
+        color: var(--header-color);    
+        
+        float: left;
+        position: fixed;
+
+        bottom: 0;
+       
+        /* background-color: rgba(125, 125, 125, 0.29); */       
+
+        display: block;
+        z-index: 9999;
+
+        /** Initially hide navigation bar*/
+        display: block;
+
+        text-align: left;
+
+        font-family: "Segoe UI", Segoe, Calibri, "Nimbus Sans L", "Ubuntu", Tahoma, Arial, Helvetica, Verdana, sans-serif;
+    }
+
+    #text-table-of-contents {
+        display: block;
+    }
+
+
+
+
+    img{
+        max-width: 100%;
+    }
+
+
+   p {
+       text-indent: 25px;
+       text-align:  justify;
+       line-height: 1.5;
+       width:       var(--max-text-width);
+
+       -moz-osx-font-smoothing: grayscale;
+       -webkit-font-smoothing: antialiased !important;
+       -moz-font-smoothing: antialiased !important;
+       text-rendering: optimizelegibility !important;
+       letter-spacing: .03em;
+
+       font-family: 'Merriweather', Georgia, 'Times New Roman', Times, serif;
+   }
+
+
+    /* ======== Table ================================== */
+
+   table {
+       font-size: 10pt;
+       border-collapse: collapse;
+       border-spacing:  0;
+       width:           90%;
+       margin-top:      20px;
+       margin-bottom:   20px;
+
+       background-color: lavender;
+    }
+
+    th {
+        background-color: black;
+        color: white;
+        /* padding-top: 30px; */
+        font-weight: bold;
+
+        /* text-align: justified; */
+    }
+
+    th.left {
+        text-align: left;
+    }
+
+    td,th {
+        padding: 0;
+        /* width: 100%; */
+    }
+
+   
+    
+    pre {
+        font-family: "Operator Mono SSm A", "Operator Mono SSm B", 'Source Code Pro', Menlo, Consolas, Monaco, monospace;
+        /* font-family: monospace,monospace; */
+        font-size: 8pt;
+
+        /* background-color:#292929; */
+        background-color: #e4eadb;
+        filter: invert(90%); 
+
+        /* background: #333;    */
+
+        display: block;
+
+        /* color:#fff; */
+        /* color:#555; */
+
+        padding:2em 28px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        width:  95%;
+        /* float:right; */
+        /* clear:right; */
+
+        border-radius: 16px;
+        /* border: 1px solid #777; */
+        box-sizing:border-box;
+        /* text-shadow:0px 1px 2px rgba(0,0,0,0.4) */
+
+        overflow-x: scroll;
+    }
+
+
+    
+} /*----- End of desktop specific design ---*/
+
+
+
 
 /**========= Blockquote and citations ============ */
 
@@ -280,38 +772,6 @@ code {
 
 /* ======== Code block Syntax Highlight ======================= */
 
-
-pre {
-    font-family: "Operator Mono SSm A", "Operator Mono SSm B", 'Source Code Pro', Menlo, Consolas, Monaco, monospace;
-    /* font-family: monospace,monospace; */
-    font-size: 10pt;
-
-	/* background-color:#292929; */
-    background-color: #e4eadb;
-    filter: invert(90%); 
-
-    /* background: #333;    */
-
-    display: block;
-
-	/* color:#fff; */
-    /* color:#555; */
-
-    padding:2em 28px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    
-	width:  95%;
-	/* float:right; */
-	/* clear:right; */
-
-    border-radius: 16px;
-    /* border: 1px solid #777; */
-	box-sizing:border-box;
-	/* text-shadow:0px 1px 2px rgba(0,0,0,0.4) */
-
-    overflow-x: scroll;
-}
 
 
 pre span.org-builtin                     {color:#006FE0;font-weight:bold;}
