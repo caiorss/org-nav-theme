@@ -1,4 +1,7 @@
 #+AUTHOR: Dummy Mr. nobody
 #+EMAIL:  <nobody@nomail.com>
+
+#+HTML_HEAD: <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
 #+HTML_HEAD: <link href="theme/org-nav-theme.css" rel="stylesheet"> 
 #+HTML_HEAD: <script src="theme/org-nav-theme.js"></script>
+
