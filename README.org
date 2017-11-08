@@ -38,7 +38,6 @@ Ideas:
 
  - Make this theme convenient for mobile devices.
 
-
 ** Install it  
 
 Step 1. Put the directory ./theme where are the org-files and add to each org-file. 
@@ -46,20 +45,17 @@ Step 1. Put the directory ./theme where are the org-files and add to each org-fi
 #+BEGIN_SRC sh
 $ tree .
 .
-├── README.html
 ├── README.org
 └── theme
-    ├── org-nav.org
     ├── org-nav-theme.css
-    └── org-nav-theme.js
-
-1 directory, 5 file
+    ├── org-nav-theme.js
+    └── theme.org
 #+END_SRC
 
 Step 2. Add thoses headers at the top of the file: 
 
 #+BEGIN_SRC 
-#+INCLUDE: theme/org-nav.org
+#+INCLUDE: theme/theme.org
 #+END_SRC
 
 Step 3. To export an org-file such as README.org to README.html run: 
