@@ -473,8 +473,7 @@ li {
 
 
     img{
-        width:     100%;
-        max-width: var(--max-image-width);
+        max-width: 100%;
     }
 
 
