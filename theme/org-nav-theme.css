@@ -447,7 +447,7 @@ li {
 
 
     #content {
-        top:          0;
+        top:          50px;
         margin-top:   60px;
         font-size:    1rem;
         width:        100%;      
@@ -458,11 +458,11 @@ li {
         overflow-y:  scroll;
         
         /* float:     bottom; */
-        position:  fixed;
+        position:  absolute;
 
         display:   block;
 
-        padding-bottom:60px;
+        /* padding-bottom:60px; */
     }
 
 
@@ -878,11 +878,6 @@ li {
 
 
 } /*----- End of desktop specific design ---*/
-
-
-
-
-/**========= Blockquote and citations ============ */
 
 
 /* ======= Code block style ======================= */
