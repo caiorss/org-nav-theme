@@ -106,11 +106,13 @@ a {
 /** Align table caption to the left. */
 caption {
     text-align: left;
+    font-size: 10pt;
 }
 
 /** Align picture caption to the left. */
 .figure p {
     text-align: left;
+    font-size: 10pt;
 }
 
 
