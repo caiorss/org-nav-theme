@@ -214,9 +214,13 @@ li {
     #table-of-contents {
         top:    0px;       
         width:  var(--toc-width);        
-        height: 50px;
+        height: 30px;
         width:  100%;        
         overflow-y: hidden;
+        margin-left: 0;
+        margin-right: 0;
+        padding-bottom: 20px;
+        padding-left: -10px;
         
         background-color: var(--toc-bgcolor);
         color: var(--header-color);    
@@ -224,7 +228,7 @@ li {
         float: left;
         position: fixed;
 
-        bottom: 0;
+        /* bottom: 0; */
        
         /* background-color: rgba(125, 125, 125, 0.29); */       
 
@@ -238,7 +242,20 @@ li {
 
     #table-of-contents h2 {
         display: block:
-        height:  50px;
+        height:  30px;
+        width:   60px;
+        background: #EEEEEE;
+        text-decoration: none;
+
+        -webkit-touch-callout: none;
+        -webkit-user-select: none; /* Disable selection/copy in UIWebView */
+        -webkit-text-size-adjust: none;
+
+        /* border: 1px solid #000; */
+        /* use-select: none; */
+        appearance: button;
+        z-index: 9999;
+        cursor: pointer;
     }
 
     #table-of-contents a {
@@ -494,11 +511,25 @@ li {
         text-align: left;        
     }
 
+
     #table-of-contents h2 {
         display: block:
         height:  50px;
+        width:   60px;
+        background: #EEEEEE;
+        text-decoration: none;
+
+        -webkit-touch-callout: none;
+        -webkit-user-select: none; /* Disable selection/copy in UIWebView */
+        -webkit-text-size-adjust: none;
+
+        /* border: 1px solid #000; */
+        /* use-select: none; */
+        appearance: button;
+        z-index: 9999;
+        cursor: pointer;
     }
-    
+
     #table-of-contents a {
         display: block;
         /* width:   100px; */
