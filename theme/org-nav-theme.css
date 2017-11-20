@@ -20,7 +20,7 @@
     /** ====== Table of contents settings ===== */
 
     --toc-width:    270px;        
-    --toc-bgcolor:  #faf9dc;
+    --toc-bgcolor:  #D8D8D8;
 
 
     /** ====== Body Settings =================== */
@@ -149,9 +149,10 @@ li {
 #table-of-contents  a {
     /* color:          rgba(0,0,0,1); */
     /* font-weight:    700; */
-    color:          rgb(11, 83, 149);
+    color:            #383838; /* rgb(11, 83, 149); */
     position:       relative;
     text-overflow:  ellipsis;
+    border-bottom:  none;
 }
 
 #table-of-contents a:hover {
