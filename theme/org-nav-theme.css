@@ -26,7 +26,7 @@
     /** ====== Body Settings =================== */
     
     /** Content length */
-    --main-width:    760px;
+    --main-width:    800px;
 
     --header-color:  #1572AE;
 
@@ -693,7 +693,7 @@ li {
 @media only screen and (min-width: 961px) {
 
     html {
-        background-color: #1f1f1f;
+        background-color: #262c33;
     }
     
     body {
@@ -778,7 +778,7 @@ li {
        font-size: 10pt;
        border-collapse: collapse;
        border-spacing:  0;
-       width:           90%;
+       width:           100%;
        margin-top:      20px;
        margin-bottom:   20px;
 
