@@ -41,7 +41,9 @@
     --linkcolor: #02A4ED;
 
     /** Body background color - Usef #fff for white. */
-    --bodyBgColor: #3A3A3A;  /* #252525; /\* #1A1A1A;  *\/ */
+    --bodyBgColor: #393939;
+
+    /* #3A3A3A;  /\* #252525; /\\* #1A1A1A;  *\\/ *\/ */
 
 
   /** ====== Mobile Layout Settings =================== */
@@ -98,6 +100,10 @@ a {
     -webkit-text-decoration-skip: objects;
 }
 
+
+.tag {
+    background-color: #0e0707;
+}
 
 
 
@@ -894,7 +900,7 @@ li {
 
 
 code {
-    background-color: #dbdfe0;
+    /* background-color: #dbdfe0; */
     border: 1px solid #DEDEDE;
     /* color: #444444; */
     font-family: monospace;
