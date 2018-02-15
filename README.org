@@ -15,13 +15,25 @@ navigation bar at the left side.
 
  - [[https://caiorss.github.io/org-nav-theme][Demonstration]] 
 
-Screenshots:
+Features: 
+ 
+ - It makes easy to browse large org-mode files exported to html as it
+   provides a scrollable sidebar showing the table of contents.
 
-#+CAPTION: Screenshot 1 
-[[file:images/image1.png][file:images/image1.png]] 
+ - Dark Theme - Dark scify background makes staring the screen for long
+   hours less tiring for the eyes.
 
-#+CAPTION: Screenshot 2 
-[[file:images/image2.png][file:images/image2.png]] 
+ - Mobile friend. It now works on Phones and Table Screens and
+   provides a mobile-friendly table of contents menu. 
+
+
+# Screenshots:
+
+# #+CAPTION: Screenshot 1 
+# [[file:images/image1.png][file:images/image1.png]] 
+
+# #+CAPTION: Screenshot 2 
+# [[file:images/image2.png][file:images/image2.png]] 
 
 ** Objectives 
 
