@@ -58,8 +58,6 @@ html {
     color: #fff;
 }
     
-
-
 h1 {
 
     text-align: center;
@@ -349,7 +347,7 @@ li {
    }
 
     
-
+   /* Mobile screen table */
     table {
         border-collapse: collapse;
         border-spacing:  0;
@@ -357,7 +355,7 @@ li {
         margin-top:      20px;
         margin-bottom:   20px;
 
-        background-color: cyan;
+        background-color: #0b191f;
 
         font-size: var(--small-font-size);
     }
@@ -595,9 +593,8 @@ li {
        white-space: -o-pre-wrap; /* Opera 7 */    
        word-wrap: break-word; /* Internet Explorer 5.5+ */
    }
-
-    
-
+   
+   /* Tablet screen table */ 
     table {
         border-collapse: collapse;
         border-spacing:  0;
@@ -605,14 +602,14 @@ li {
         margin-top:      20px;
         margin-bottom:   20px;
 
-        background-color: lavender;
+        background-color:  #0b191f;
 
         font-size: var(--small-font-size);
     }
 
     th {
         background-color: black;
-        color: white;
+        color: #fff;
         /* padding-top: 30px; */
         font-weight: bold;
 
@@ -785,6 +782,7 @@ li {
 
     /* ======== Table ================================== */
 
+   /* Desktop screen table */
    table {
        font-size: 10pt;
        border-collapse: collapse;
