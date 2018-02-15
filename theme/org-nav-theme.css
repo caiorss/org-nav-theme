@@ -41,7 +41,7 @@
     --linkcolor: #00FC00;
 
     /** Body background color - Usef #fff for white. */
-    --bodyBgColor: #000000;
+    --bodyBgColor: #152128;
 
     /* #3A3A3A;  /\* #252525; /\\* #1A1A1A;  *\\/ *\/ */
 
@@ -73,7 +73,7 @@ ul#tabs, h2, h3, h4, h5 {
 }
 
 h2, h3, h4, h5, h6 {
-    color:  #FFFFFF;
+    color:  #699bad;
 }
 
 h2 {
@@ -380,7 +380,7 @@ li {
         /* width: 100%; */
     }
 
-
+    /* Code block of mobile screen  */ 
     pre {
         font-family: "Operator Mono SSm A", "Operator Mono SSm B", 'Source Code Pro', Menlo, Consolas, Monaco, monospace;
         font-size:   var(--small-font-size);
@@ -393,6 +393,7 @@ li {
 
         /* background-color:#292929; */
         background-color: #e4eadb;
+        color:  black;
         filter: invert(90%); 
 
         display: block;
@@ -627,7 +628,7 @@ li {
         /* width: 100%; */
     }
 
-
+    /* Code block for tablet-size screens */
     pre {
         font-family: "Operator Mono SSm A", "Operator Mono SSm B", 'Source Code Pro', Menlo, Consolas, Monaco, monospace;
         font-size:   var(--small-font-size);
@@ -640,6 +641,7 @@ li {
 
         /* background-color:#292929; */
         background-color: #e4eadb;
+        color: black; 
         filter: invert(90%); 
 
         display: block;
@@ -727,7 +729,7 @@ li {
         /* z-index:          9999; */
     }
 
-
+  
     #table-of-contents {
         top:    0px;
         left:   0px;
@@ -791,7 +793,7 @@ li {
        margin-top:      20px;
        margin-bottom:   20px;
 
-       background-color:  #252525 ;
+       background-color:  #0b191f ;
     }
 
     th {
@@ -813,7 +815,7 @@ li {
     }
 
    
-    
+    /* Code block of desktop screen */
     pre {
         font-family: "Operator Mono SSm A", "Operator Mono SSm B", 'Source Code Pro', Menlo, Consolas, Monaco, monospace;
         /* font-family: monospace,monospace; */
