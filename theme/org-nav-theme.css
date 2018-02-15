@@ -50,7 +50,13 @@
 
    /** Font size used to make tables and code blocks (pre tag) fit in mobile screen. */
   --small-font-size: 8pt;
-    
+
+
+  /** ====== Table Settings ========= **/
+  --table-header-bg-color: black;
+  --table-bg-color:        #0b191f;
+  --table-fg-color:        #fff;
+  
 }
 
 html {
@@ -335,8 +341,7 @@ li {
        font-family: 'Merriweather', Georgia, 'Times New Roman', Times, serif;
    }
 
-    
-    
+        
    #permalink_section
    {
        white-space: pre-wrap; /* css-3 */    
@@ -355,14 +360,14 @@ li {
         margin-top:      20px;
         margin-bottom:   20px;
 
-        background-color: #0b191f;
+        background-color: var(--table-bg-color);
 
         font-size: var(--small-font-size);
     }
 
     th {
-        background-color: black;
-        color: white;
+        background-color: var(--table-header-bg-color);
+        color:            var(--table-fg-color);
         /* padding-top: 30px; */
         font-weight: bold;
 
@@ -602,17 +607,16 @@ li {
         margin-top:      20px;
         margin-bottom:   20px;
 
-        background-color:  #0b191f;
+        background-color: var(--table-bg-color);
 
         font-size: var(--small-font-size);
     }
 
     th {
-        background-color: black;
-        color: #fff;
+        background-color: var(--table-header-bg-color);
+        color:            var(--table-fg-color);
         /* padding-top: 30px; */
         font-weight: bold;
-
         /* text-align: justified; */
     }
 
@@ -791,12 +795,12 @@ li {
        margin-top:      20px;
        margin-bottom:   20px;
 
-       background-color:  #0b191f ;
+       background-color: var(--table-bg-color);
     }
 
     th {
-        background-color: black;
-        color: #fff;
+        background-color: var(--table-header-bg-color);
+        color:            var(--table-fg-color);
         /* padding-top: 30px; */
         font-weight: bold;
 
