@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>Org-nav</title>
-<!-- 2017-11-08 Wed 05:05 -->
+<!-- 2018-02-15 Thu 01:19 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="Dummy Mr. nobody" />
@@ -209,22 +209,22 @@ navigation bar at the left side.
 </ul>
 
 <p>
-Screenshots:
+Features: 
 </p>
 
+<ul class="org-ul">
+<li>It makes easy to browse large org-mode files exported to html as it
+provides a scrollable sidebar showing the table of contents.
+</li>
 
-<div class="figure">
-<p><a href="images/image1.png"><img src="images/image1.png" alt="image1.png" /></a> 
-</p>
-<p><span class="figure-number">Figure 1:</span> Screenshot 1</p>
-</div>
+<li>Dark Theme - Dark scify background makes staring the screen for long
+hours less tiring for the eyes.
+</li>
 
-
-<div class="figure">
-<p><a href="images/image2.png"><img src="images/image2.png" alt="image2.png" /></a> 
-</p>
-<p><span class="figure-number">Figure 2:</span> Screenshot 2</p>
-</div>
+<li>Mobile friend. It now works on Phones and Table Screens and
+provides a mobile-friendly table of contents menu. 
+</li>
+</ul>
 </div>
 </div>
 
@@ -1000,83 +1000,83 @@ systems like Linux, BSD variants and OSX and IOS.
 <span class="org-comment">      Objective: Show C/C++ primitive data types sizes.      </span>
 <span class="org-comment"> */</span>
 
-<span class="org-preprocessor">#include</span> <span class="org-string">&lt;iostream&gt;</span>
-<span class="org-preprocessor">#include</span> <span class="org-string">&lt;limits&gt;</span>
+<span class="org-preprocessor">#include</span> <span class="org-string"><span class="org-rainbow-delimiters-depth-1">&lt;</span></span><span class="org-string">iostream</span><span class="org-string"><span class="org-rainbow-delimiters-depth-1">&gt;</span></span>
+<span class="org-preprocessor">#include</span> <span class="org-string"><span class="org-rainbow-delimiters-depth-1">&lt;</span></span><span class="org-string">limits</span><span class="org-string"><span class="org-rainbow-delimiters-depth-1">&gt;</span></span>
 
 <span class="org-keyword">using</span> <span class="org-keyword">namespace</span> <span class="org-constant">std</span>;
 
 
-<span class="org-type">int</span> <span class="org-function-name">main</span>(){
+<span class="org-type">int</span> <span class="org-function-name">main</span><span class="org-rainbow-delimiters-depth-1">(){</span>
   <span class="org-comment-delimiter">// </span><span class="org-comment">8 bits / 1 byte numeric types</span>
   <span class="org-comment-delimiter">//</span><span class="org-comment">---------------------------------------------------</span>
-  <span class="org-type">int</span> <span class="org-variable-name">charMin</span> = <span class="org-constant">numeric_limits</span>&lt;<span class="org-type">char</span>&gt;::min() ;
-  <span class="org-type">int</span> <span class="org-variable-name">charMax</span> = <span class="org-constant">numeric_limits</span>&lt;<span class="org-type">char</span>&gt;::max() ;
+  <span class="org-type">int</span> <span class="org-variable-name">charMin</span> = <span class="org-constant">numeric_limits</span><span class="org-rainbow-delimiters-depth-2">&lt;</span><span class="org-type">char</span><span class="org-rainbow-delimiters-depth-2">&gt;</span>::min<span class="org-rainbow-delimiters-depth-2">()</span> ;
+  <span class="org-type">int</span> <span class="org-variable-name">charMax</span> = <span class="org-constant">numeric_limits</span><span class="org-rainbow-delimiters-depth-2">&lt;</span><span class="org-type">char</span><span class="org-rainbow-delimiters-depth-2">&gt;</span>::max<span class="org-rainbow-delimiters-depth-2">()</span> ;
 
-  <span class="org-type">int</span> <span class="org-variable-name">scharMin</span> = <span class="org-constant">numeric_limits</span>&lt;<span class="org-type">signed</span> <span class="org-type">char</span>&gt;::min() ;
-  <span class="org-type">int</span> <span class="org-variable-name">scharMax</span> = <span class="org-constant">numeric_limits</span>&lt;<span class="org-type">signed</span> <span class="org-type">char</span>&gt;::max() ;
+  <span class="org-type">int</span> <span class="org-variable-name">scharMin</span> = <span class="org-constant">numeric_limits</span><span class="org-rainbow-delimiters-depth-2">&lt;</span><span class="org-type">signed</span> <span class="org-type">char</span><span class="org-rainbow-delimiters-depth-2">&gt;</span>::min<span class="org-rainbow-delimiters-depth-2">()</span> ;
+  <span class="org-type">int</span> <span class="org-variable-name">scharMax</span> = <span class="org-constant">numeric_limits</span><span class="org-rainbow-delimiters-depth-2">&lt;</span><span class="org-type">signed</span> <span class="org-type">char</span><span class="org-rainbow-delimiters-depth-2">&gt;</span>::max<span class="org-rainbow-delimiters-depth-2">()</span> ;
 
-  <span class="org-type">int</span> <span class="org-variable-name">ucharMin</span> = <span class="org-constant">numeric_limits</span>&lt;<span class="org-type">unsigned</span> <span class="org-type">char</span>&gt;::min() ;
-  <span class="org-type">int</span> <span class="org-variable-name">ucharMax</span> = <span class="org-constant">numeric_limits</span>&lt;<span class="org-type">unsigned</span> <span class="org-type">char</span>&gt;::max() ;
+  <span class="org-type">int</span> <span class="org-variable-name">ucharMin</span> = <span class="org-constant">numeric_limits</span><span class="org-rainbow-delimiters-depth-2">&lt;</span><span class="org-type">unsigned</span> <span class="org-type">char</span><span class="org-rainbow-delimiters-depth-2">&gt;</span>::min<span class="org-rainbow-delimiters-depth-2">()</span> ;
+  <span class="org-type">int</span> <span class="org-variable-name">ucharMax</span> = <span class="org-constant">numeric_limits</span><span class="org-rainbow-delimiters-depth-2">&lt;</span><span class="org-type">unsigned</span> <span class="org-type">char</span><span class="org-rainbow-delimiters-depth-2">&gt;</span>::max<span class="org-rainbow-delimiters-depth-2">()</span> ;
 
-  <span class="org-type">int</span> <span class="org-variable-name">int8Min</span>  = <span class="org-constant">numeric_limits</span>&lt;<span class="org-type">int8_t</span>&gt;::min() ;
-  <span class="org-type">int</span> <span class="org-variable-name">int8Max</span>  = <span class="org-constant">numeric_limits</span>&lt;<span class="org-type">int8_t</span>&gt;::max() ;  
+  <span class="org-type">int</span> <span class="org-variable-name">int8Min</span>  = <span class="org-constant">numeric_limits</span><span class="org-rainbow-delimiters-depth-2">&lt;</span><span class="org-type">int8_t</span><span class="org-rainbow-delimiters-depth-2">&gt;</span>::min<span class="org-rainbow-delimiters-depth-2">()</span> ;
+  <span class="org-type">int</span> <span class="org-variable-name">int8Max</span>  = <span class="org-constant">numeric_limits</span><span class="org-rainbow-delimiters-depth-2">&lt;</span><span class="org-type">int8_t</span><span class="org-rainbow-delimiters-depth-2">&gt;</span>::max<span class="org-rainbow-delimiters-depth-2">()</span> ;  
 
-  <span class="org-type">int</span> <span class="org-variable-name">uint8Min</span>  = <span class="org-constant">numeric_limits</span>&lt;<span class="org-type">uint8_t</span>&gt;::min() ;
-  <span class="org-type">int</span> <span class="org-variable-name">uint8Max</span>  = <span class="org-constant">numeric_limits</span>&lt;<span class="org-type">uint8_t</span>&gt;::max() ;
+  <span class="org-type">int</span> <span class="org-variable-name">uint8Min</span>  = <span class="org-constant">numeric_limits</span><span class="org-rainbow-delimiters-depth-2">&lt;</span><span class="org-type">uint8_t</span><span class="org-rainbow-delimiters-depth-2">&gt;</span>::min<span class="org-rainbow-delimiters-depth-2">()</span> ;
+  <span class="org-type">int</span> <span class="org-variable-name">uint8Max</span>  = <span class="org-constant">numeric_limits</span><span class="org-rainbow-delimiters-depth-2">&lt;</span><span class="org-type">uint8_t</span><span class="org-rainbow-delimiters-depth-2">&gt;</span>::max<span class="org-rainbow-delimiters-depth-2">()</span> ;
 
   <span class="org-comment-delimiter">// </span><span class="org-comment">16 bits / 2 bytes Numeric types</span>
   <span class="org-comment-delimiter">//</span><span class="org-comment">---------------------------------------------------</span>
 
-  <span class="org-type">int</span> <span class="org-variable-name">shortMin</span>  = <span class="org-constant">numeric_limits</span>&lt;<span class="org-type">short</span>&gt;::min() ;
-  <span class="org-type">int</span> <span class="org-variable-name">shortMax</span>  = <span class="org-constant">numeric_limits</span>&lt;<span class="org-type">short</span>&gt;::max() ;
+  <span class="org-type">int</span> <span class="org-variable-name">shortMin</span>  = <span class="org-constant">numeric_limits</span><span class="org-rainbow-delimiters-depth-2">&lt;</span><span class="org-type">short</span><span class="org-rainbow-delimiters-depth-2">&gt;</span>::min<span class="org-rainbow-delimiters-depth-2">()</span> ;
+  <span class="org-type">int</span> <span class="org-variable-name">shortMax</span>  = <span class="org-constant">numeric_limits</span><span class="org-rainbow-delimiters-depth-2">&lt;</span><span class="org-type">short</span><span class="org-rainbow-delimiters-depth-2">&gt;</span>::max<span class="org-rainbow-delimiters-depth-2">()</span> ;
 
-  <span class="org-type">int</span> <span class="org-variable-name">ushortMin</span>  = <span class="org-constant">numeric_limits</span>&lt;<span class="org-type">unsigned</span> <span class="org-type">short</span>&gt;::min() ;
-  <span class="org-type">int</span> <span class="org-variable-name">ushortMax</span>  = <span class="org-constant">numeric_limits</span>&lt;<span class="org-type">unsigned</span> <span class="org-type">short</span>&gt;::max() ;
+  <span class="org-type">int</span> <span class="org-variable-name">ushortMin</span>  = <span class="org-constant">numeric_limits</span><span class="org-rainbow-delimiters-depth-2">&lt;</span><span class="org-type">unsigned</span> <span class="org-type">short</span><span class="org-rainbow-delimiters-depth-2">&gt;</span>::min<span class="org-rainbow-delimiters-depth-2">()</span> ;
+  <span class="org-type">int</span> <span class="org-variable-name">ushortMax</span>  = <span class="org-constant">numeric_limits</span><span class="org-rainbow-delimiters-depth-2">&lt;</span><span class="org-type">unsigned</span> <span class="org-type">short</span><span class="org-rainbow-delimiters-depth-2">&gt;</span>::max<span class="org-rainbow-delimiters-depth-2">()</span> ;
 
-  <span class="org-type">int</span> <span class="org-variable-name">int16Min</span>  = <span class="org-constant">numeric_limits</span>&lt;<span class="org-type">int16_t</span>&gt;::min() ;
-  <span class="org-type">int</span> <span class="org-variable-name">int16Max</span>  = <span class="org-constant">numeric_limits</span>&lt;<span class="org-type">int16_t</span>&gt;::max() ;  
+  <span class="org-type">int</span> <span class="org-variable-name">int16Min</span>  = <span class="org-constant">numeric_limits</span><span class="org-rainbow-delimiters-depth-2">&lt;</span><span class="org-type">int16_t</span><span class="org-rainbow-delimiters-depth-2">&gt;</span>::min<span class="org-rainbow-delimiters-depth-2">()</span> ;
+  <span class="org-type">int</span> <span class="org-variable-name">int16Max</span>  = <span class="org-constant">numeric_limits</span><span class="org-rainbow-delimiters-depth-2">&lt;</span><span class="org-type">int16_t</span><span class="org-rainbow-delimiters-depth-2">&gt;</span>::max<span class="org-rainbow-delimiters-depth-2">()</span> ;  
 
-  <span class="org-type">int</span> <span class="org-variable-name">uint16Min</span>  = <span class="org-constant">numeric_limits</span>&lt;<span class="org-type">uint16_t</span>&gt;::min() ;
-  <span class="org-type">int</span> <span class="org-variable-name">uint16Max</span>  = <span class="org-constant">numeric_limits</span>&lt;<span class="org-type">uint16_t</span>&gt;::max() ;  
+  <span class="org-type">int</span> <span class="org-variable-name">uint16Min</span>  = <span class="org-constant">numeric_limits</span><span class="org-rainbow-delimiters-depth-2">&lt;</span><span class="org-type">uint16_t</span><span class="org-rainbow-delimiters-depth-2">&gt;</span>::min<span class="org-rainbow-delimiters-depth-2">()</span> ;
+  <span class="org-type">int</span> <span class="org-variable-name">uint16Max</span>  = <span class="org-constant">numeric_limits</span><span class="org-rainbow-delimiters-depth-2">&lt;</span><span class="org-type">uint16_t</span><span class="org-rainbow-delimiters-depth-2">&gt;</span>::max<span class="org-rainbow-delimiters-depth-2">()</span> ;  
 
   <span class="org-comment-delimiter">// </span><span class="org-comment">32 bits / 4 bytes Numeric types</span>
   <span class="org-comment-delimiter">//</span><span class="org-comment">---------------------------------------------------</span>
 
-  <span class="org-type">int</span> <span class="org-variable-name">intMin</span>  = <span class="org-constant">numeric_limits</span>&lt;<span class="org-type">int</span>&gt;::min() ;
-  <span class="org-type">int</span> <span class="org-variable-name">intMax</span>  = <span class="org-constant">numeric_limits</span>&lt;<span class="org-type">int</span>&gt;::max() ;  
+  <span class="org-type">int</span> <span class="org-variable-name">intMin</span>  = <span class="org-constant">numeric_limits</span><span class="org-rainbow-delimiters-depth-2">&lt;</span><span class="org-type">int</span><span class="org-rainbow-delimiters-depth-2">&gt;</span>::min<span class="org-rainbow-delimiters-depth-2">()</span> ;
+  <span class="org-type">int</span> <span class="org-variable-name">intMax</span>  = <span class="org-constant">numeric_limits</span><span class="org-rainbow-delimiters-depth-2">&lt;</span><span class="org-type">int</span><span class="org-rainbow-delimiters-depth-2">&gt;</span>::max<span class="org-rainbow-delimiters-depth-2">()</span> ;  
 
   cout &lt;&lt; <span class="org-string">"C/C++ Data type sizes in number of bytes (1 byte = 8 bits)"</span> &lt;&lt; endl;
 
   cout &lt;&lt; <span class="org-string">"\n1 byte / 8 bits Data types"</span>                       &lt;&lt; endl;
   cout &lt;&lt;  <span class="org-string">"------------------------------------"</span>              &lt;&lt; endl; 
-  cout &lt;&lt; <span class="org-string">"sizeof(char)          = "</span> &lt;&lt; <span class="org-keyword">sizeof</span>(<span class="org-type">char</span>)           &lt;&lt; <span class="org-string">" min = "</span> &lt;&lt; charMin  &lt;&lt; <span class="org-string">" max = "</span> &lt;&lt; charMax &lt;&lt; endl; 
-  cout &lt;&lt; <span class="org-string">"sizeof(signed char)   = "</span> &lt;&lt; <span class="org-keyword">sizeof</span>(<span class="org-type">signed</span> <span class="org-type">char</span>)    &lt;&lt; <span class="org-string">" min = "</span> &lt;&lt; scharMin &lt;&lt; <span class="org-string">" max = "</span> &lt;&lt; scharMax &lt;&lt; endl; 
-  cout &lt;&lt; <span class="org-string">"sizeof(unsigned char) = "</span> &lt;&lt; <span class="org-keyword">sizeof</span>(<span class="org-type">unsigned</span> <span class="org-type">char</span>)  &lt;&lt; <span class="org-string">" min = "</span> &lt;&lt; ucharMin &lt;&lt; <span class="org-string">" max = "</span> &lt;&lt; ucharMax &lt;&lt; endl; 
-  cout &lt;&lt; <span class="org-string">"sizeof(int8_t)        = "</span> &lt;&lt; <span class="org-keyword">sizeof</span>(int8_t)         &lt;&lt; <span class="org-string">" min = "</span> &lt;&lt; int8Min  &lt;&lt; <span class="org-string">" max = "</span> &lt;&lt; int8Max &lt;&lt; endl; 
-  cout &lt;&lt; <span class="org-string">"sizeof(uint8_t)       = "</span> &lt;&lt; <span class="org-keyword">sizeof</span>(uint8_t)        &lt;&lt; <span class="org-string">" min = "</span> &lt;&lt; uint8Min &lt;&lt; <span class="org-string">" max = "</span> &lt;&lt; uint8Max &lt;&lt; endl; 
+  cout &lt;&lt; <span class="org-string">"sizeof(char)          = "</span> &lt;&lt; <span class="org-keyword">sizeof</span><span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">char</span><span class="org-rainbow-delimiters-depth-2">)</span>           &lt;&lt; <span class="org-string">" min = "</span> &lt;&lt; charMin  &lt;&lt; <span class="org-string">" max = "</span> &lt;&lt; charMax &lt;&lt; endl; 
+  cout &lt;&lt; <span class="org-string">"sizeof(signed char)   = "</span> &lt;&lt; <span class="org-keyword">sizeof</span><span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">signed</span> <span class="org-type">char</span><span class="org-rainbow-delimiters-depth-2">)</span>    &lt;&lt; <span class="org-string">" min = "</span> &lt;&lt; scharMin &lt;&lt; <span class="org-string">" max = "</span> &lt;&lt; scharMax &lt;&lt; endl; 
+  cout &lt;&lt; <span class="org-string">"sizeof(unsigned char) = "</span> &lt;&lt; <span class="org-keyword">sizeof</span><span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">unsigned</span> <span class="org-type">char</span><span class="org-rainbow-delimiters-depth-2">)</span>  &lt;&lt; <span class="org-string">" min = "</span> &lt;&lt; ucharMin &lt;&lt; <span class="org-string">" max = "</span> &lt;&lt; ucharMax &lt;&lt; endl; 
+  cout &lt;&lt; <span class="org-string">"sizeof(int8_t)        = "</span> &lt;&lt; <span class="org-keyword">sizeof</span><span class="org-rainbow-delimiters-depth-2">(</span>int8_t<span class="org-rainbow-delimiters-depth-2">)</span>         &lt;&lt; <span class="org-string">" min = "</span> &lt;&lt; int8Min  &lt;&lt; <span class="org-string">" max = "</span> &lt;&lt; int8Max &lt;&lt; endl; 
+  cout &lt;&lt; <span class="org-string">"sizeof(uint8_t)       = "</span> &lt;&lt; <span class="org-keyword">sizeof</span><span class="org-rainbow-delimiters-depth-2">(</span>uint8_t<span class="org-rainbow-delimiters-depth-2">)</span>        &lt;&lt; <span class="org-string">" min = "</span> &lt;&lt; uint8Min &lt;&lt; <span class="org-string">" max = "</span> &lt;&lt; uint8Max &lt;&lt; endl; 
 
   cout &lt;&lt; <span class="org-string">"\n2 bytes / 16 bits Data types"</span>                     &lt;&lt; endl;  
   cout &lt;&lt;  <span class="org-string">"------------------------------------"</span>              &lt;&lt; endl;   
-  cout &lt;&lt; <span class="org-string">"sizeof(short)         = "</span> &lt;&lt; <span class="org-keyword">sizeof</span>(<span class="org-type">short</span>)          &lt;&lt; <span class="org-string">" min = "</span> &lt;&lt; shortMin  &lt;&lt; <span class="org-string">" max = "</span> &lt;&lt; shortMax  &lt;&lt; endl; 
-  cout &lt;&lt; <span class="org-string">"sizeof(usigned short) = "</span> &lt;&lt; <span class="org-keyword">sizeof</span>(<span class="org-type">unsigned</span> <span class="org-type">short</span>) &lt;&lt; <span class="org-string">" min = "</span> &lt;&lt; ushortMin &lt;&lt; <span class="org-string">" max = "</span> &lt;&lt; ushortMax &lt;&lt; endl; 
-  cout &lt;&lt; <span class="org-string">"sizeof(int16_t)       = "</span> &lt;&lt; <span class="org-keyword">sizeof</span>(int16_t)        &lt;&lt; <span class="org-string">" min = "</span> &lt;&lt; int16Min  &lt;&lt; <span class="org-string">" max = "</span> &lt;&lt; int16Max  &lt;&lt; endl;  
-  cout &lt;&lt; <span class="org-string">"sizeof(uint16_t)      = "</span> &lt;&lt; <span class="org-keyword">sizeof</span>(uint16_t)       &lt;&lt; <span class="org-string">" min = "</span> &lt;&lt; uint16Min &lt;&lt; <span class="org-string">" max = "</span> &lt;&lt; uint16Max &lt;&lt; endl;  
+  cout &lt;&lt; <span class="org-string">"sizeof(short)         = "</span> &lt;&lt; <span class="org-keyword">sizeof</span><span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">short</span><span class="org-rainbow-delimiters-depth-2">)</span>          &lt;&lt; <span class="org-string">" min = "</span> &lt;&lt; shortMin  &lt;&lt; <span class="org-string">" max = "</span> &lt;&lt; shortMax  &lt;&lt; endl; 
+  cout &lt;&lt; <span class="org-string">"sizeof(usigned short) = "</span> &lt;&lt; <span class="org-keyword">sizeof</span><span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">unsigned</span> <span class="org-type">short</span><span class="org-rainbow-delimiters-depth-2">)</span> &lt;&lt; <span class="org-string">" min = "</span> &lt;&lt; ushortMin &lt;&lt; <span class="org-string">" max = "</span> &lt;&lt; ushortMax &lt;&lt; endl; 
+  cout &lt;&lt; <span class="org-string">"sizeof(int16_t)       = "</span> &lt;&lt; <span class="org-keyword">sizeof</span><span class="org-rainbow-delimiters-depth-2">(</span>int16_t<span class="org-rainbow-delimiters-depth-2">)</span>        &lt;&lt; <span class="org-string">" min = "</span> &lt;&lt; int16Min  &lt;&lt; <span class="org-string">" max = "</span> &lt;&lt; int16Max  &lt;&lt; endl;  
+  cout &lt;&lt; <span class="org-string">"sizeof(uint16_t)      = "</span> &lt;&lt; <span class="org-keyword">sizeof</span><span class="org-rainbow-delimiters-depth-2">(</span>uint16_t<span class="org-rainbow-delimiters-depth-2">)</span>       &lt;&lt; <span class="org-string">" min = "</span> &lt;&lt; uint16Min &lt;&lt; <span class="org-string">" max = "</span> &lt;&lt; uint16Max &lt;&lt; endl;  
 
   cout &lt;&lt; <span class="org-string">"\n4 bytes / 32 bits Data types"</span>                    &lt;&lt; endl;  
   cout &lt;&lt;  <span class="org-string">"------------------------------------"</span>             &lt;&lt; endl;   
-  cout &lt;&lt; <span class="org-string">"sizeof(int)           = "</span> &lt;&lt; <span class="org-keyword">sizeof</span>(<span class="org-type">int</span>)           &lt;&lt; <span class="org-string">" min = "</span> &lt;&lt; intMin &lt;&lt; <span class="org-string">" max = "</span> &lt;&lt; intMax &lt;&lt; endl;  
-  cout &lt;&lt; <span class="org-string">"sizeof(int32_t)       = "</span> &lt;&lt; <span class="org-keyword">sizeof</span>(int32_t)       &lt;&lt; endl;
-  cout &lt;&lt; <span class="org-string">"sizeof(int64_t)       = "</span> &lt;&lt; <span class="org-keyword">sizeof</span>(int64_t)       &lt;&lt; endl;
+  cout &lt;&lt; <span class="org-string">"sizeof(int)           = "</span> &lt;&lt; <span class="org-keyword">sizeof</span><span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">int</span><span class="org-rainbow-delimiters-depth-2">)</span>           &lt;&lt; <span class="org-string">" min = "</span> &lt;&lt; intMin &lt;&lt; <span class="org-string">" max = "</span> &lt;&lt; intMax &lt;&lt; endl;  
+  cout &lt;&lt; <span class="org-string">"sizeof(int32_t)       = "</span> &lt;&lt; <span class="org-keyword">sizeof</span><span class="org-rainbow-delimiters-depth-2">(</span>int32_t<span class="org-rainbow-delimiters-depth-2">)</span>       &lt;&lt; endl;
+  cout &lt;&lt; <span class="org-string">"sizeof(int64_t)       = "</span> &lt;&lt; <span class="org-keyword">sizeof</span><span class="org-rainbow-delimiters-depth-2">(</span>int64_t<span class="org-rainbow-delimiters-depth-2">)</span>       &lt;&lt; endl;
 
-  cout &lt;&lt; <span class="org-string">"sizeof(float)         = "</span> &lt;&lt; <span class="org-keyword">sizeof</span>(<span class="org-type">float</span>)         &lt;&lt; endl;  
+  cout &lt;&lt; <span class="org-string">"sizeof(float)         = "</span> &lt;&lt; <span class="org-keyword">sizeof</span><span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">float</span><span class="org-rainbow-delimiters-depth-2">)</span>         &lt;&lt; endl;  
     cout &lt;&lt; <span class="org-string">"\n8 bytes / 64 bits Data types"</span>                    &lt;&lt; endl;  
   cout &lt;&lt;  <span class="org-string">"------------------------------------"</span>             &lt;&lt; endl;    
-  cout &lt;&lt; <span class="org-string">"sizeof(long)          = "</span> &lt;&lt; <span class="org-keyword">sizeof</span>(<span class="org-type">long</span>)          &lt;&lt; endl;
-  cout &lt;&lt; <span class="org-string">"sizeof(long long)     = "</span> &lt;&lt; <span class="org-keyword">sizeof</span>(<span class="org-type">long</span> <span class="org-type">long</span>)     &lt;&lt; endl;    
-  cout &lt;&lt; <span class="org-string">"sizeof(double)        = "</span> &lt;&lt; <span class="org-keyword">sizeof</span>(<span class="org-type">double</span>)        &lt;&lt; endl;  
+  cout &lt;&lt; <span class="org-string">"sizeof(long)          = "</span> &lt;&lt; <span class="org-keyword">sizeof</span><span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">long</span><span class="org-rainbow-delimiters-depth-2">)</span>          &lt;&lt; endl;
+  cout &lt;&lt; <span class="org-string">"sizeof(long long)     = "</span> &lt;&lt; <span class="org-keyword">sizeof</span><span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">long</span> <span class="org-type">long</span><span class="org-rainbow-delimiters-depth-2">)</span>     &lt;&lt; endl;    
+  cout &lt;&lt; <span class="org-string">"sizeof(double)        = "</span> &lt;&lt; <span class="org-keyword">sizeof</span><span class="org-rainbow-delimiters-depth-2">(</span><span class="org-type">double</span><span class="org-rainbow-delimiters-depth-2">)</span>        &lt;&lt; endl;  
 
   <span class="org-keyword">return</span> 0;
-}
+<span class="org-rainbow-delimiters-depth-1">}</span>
 </pre>
 </div>
 </div>
@@ -1085,7 +1085,7 @@ systems like Linux, BSD variants and OSX and IOS.
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Dummy Mr. nobody</p>
-<p class="date">Created: 2017-11-08 Wed 05:05</p>
+<p class="date">Created: 2018-02-15 Thu 01:19</p>
 <p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.3.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
