@@ -62,7 +62,14 @@
 html {
     font-size: 100%;
     color: #fff;
-    background-color: #262c33;
+    /* background-color: #262c33; */
+    height: 100%;
+   
+    /* background-image: linear-gradient(#10416b, black); */
+    /* background: linear-gradient(black, gray, white); */
+    background: linear-gradient(black, darkgray, black);
+    background-repeat: no-repeat;
+    background-attachment: fixed;    
 }
 
 body{
