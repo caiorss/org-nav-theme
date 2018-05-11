@@ -62,7 +62,18 @@
 html {
     font-size: 100%;
     color: #fff;
+    background-color: #262c33;
 }
+
+body{
+    background-color:  var(--bodyBgColor); /* rgba(255,255,255,1.0); */
+}
+
+#content{
+    
+}
+
+
     
 h1 {
 
@@ -159,6 +170,11 @@ li {
     font-size:    14px;
 }
 
+#table-of-contents{        
+   background-color: var(--toc-bgcolor);
+   color: var(--header-color);        
+}
+
 #table-of-contents  a {
     /* color:          rgba(0,0,0,1); */
     /* font-weight:    700; */
@@ -234,10 +250,7 @@ li {
         margin-left: 0;
         margin-right: 0;
         padding-bottom: 20px;
-        padding-left: -10px;
-        
-        background-color: var(--toc-bgcolor);
-        color: var(--header-color);    
+        padding-left: -10px;      
         
         float: left;
         position: fixed;
@@ -472,7 +485,6 @@ li {
         
         /* float:     bottom; */
         position:  absolute;
-
         display:   block;
 
         /* padding-bottom:60px; */
@@ -507,10 +519,7 @@ li {
         height: 50px;
         width:  100%;        
         overflow-y: hidden;
-        
-        background-color: var(--toc-bgcolor);
-        color: var(--header-color);    
-        
+
         float: left;
         position: fixed;
 
@@ -704,10 +713,7 @@ li {
 */
 @media only screen and (min-width: 961px) {
 
-    html {
-        background-color: #262c33;
-    }
-    
+   
     body {
 
         position:  absolute;
@@ -726,7 +732,7 @@ li {
         padding-left:    20px;
         padding-right:   50px;
         /* overflow-x:       scroll; */
-        background-color:  var(--bodyBgColor); /* rgba(255,255,255,1.0); */
+      
         /* z-index:          9999; */
     }
 
@@ -737,9 +743,7 @@ li {
         width:  var(--toc-width);        
         height: 100%;
         overflow-y: scroll;
-        
-        background-color: var(--toc-bgcolor);
-        color: var(--header-color);    
+
         
         float: left;
         position: fixed;
