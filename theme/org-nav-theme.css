@@ -151,10 +151,11 @@ a {
     transition:         none 86ms ease-out;
 }
 
-a {
-    background-color:             transparent;
-    -webkit-text-decoration-skip: objects;
+a:hover {
+    /* text-decoration: underline; */
+    border-bottom: 2px var(--linkcolor) dotted;
 }
+
 
 
 .tag {
