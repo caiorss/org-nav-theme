@@ -16,40 +16,23 @@
 /** Variables */
 
 :root {
-
-    /** ====== Table of contents settings ===== */
-
-    --toc-width:    270px;        
+    /** =================== Table of contents settings ===== */
+    --toc-width:    300px;        
     --toc-bgcolor:  #D8D8D8;
 
-
-    /** ====== Body Settings =================== */
-    
+    /** ====================== Body Settings =================== */   
     /** Content length */
     --main-width:    800px;
-
     --header-color:  #1572AE;
-
-
     --max-image-width: 600px;
-    
     --max-text-width: 90%;  /* Max paragraph length and text in bullet lists. */
-
-    /** Color of hyperlinks at the body. tag <a> 
-        #AEE1B0;  /* #007bb8; */
-    
     --linkcolor: #00FC00;
-
     /** Body background color - Usef #fff for white. */
-    --bodyBgColor: #152128;
+    --bodyBgColor: #1d1f20; /* #152128; */
 
-    /* #3A3A3A;  /\* #252525; /\\* #1A1A1A;  *\\/ *\/ */
-
-
-  /** ====== Mobile Layout Settings =================== */
-
-   /** Font size used to make tables and code blocks (pre tag) fit in mobile screen. */
-  --small-font-size: 8pt;
+    /** ====== Mobile Layout Global Settings =================== */
+    /** Font size used to make tables and code blocks (pre tag) fit in mobile screen. */
+    --small-font-size: 8pt;
 
 
   /** ====== Table Settings ========= **/
@@ -62,6 +45,66 @@
 html {
     font-size: 100%;
     color: #fff;
+    /* background-color: #262c33; */
+    height: 100%;
+   
+    /* background-image: linear-gradient(#10416b, black); */
+    /* background: linear-gradient(black, gray, white); */
+    background: linear-gradient(black, darkgray, black);
+    background-repeat: no-repeat;
+    background-attachment: fixed;    
+}
+
+body{
+    background-color:  var(--bodyBgColor); /* rgba(255,255,255,1.0); */
+}
+
+#content{
+    
+}
+
+
+#table-of-contents{        
+   background-color: var(--toc-bgcolor);
+   color: var(--header-color);        
+}
+
+#table-of-contents ul {
+    padding-left: 0px;
+    padding-top:  5px;
+    padding-bottom: 10px;
+    list-style-type:     none;
+    list-style-position: inside;
+}
+
+#table-of-contents li {
+    padding-left: 10px;
+    padding-top:   4px;
+    font-size:    14px;
+}
+
+
+#table-of-contents  a {
+    /* color:          rgba(0,0,0,1); */
+    /* font-weight:    700; */
+    color:            #383838; /* rgb(11, 83, 149); */
+    position:       relative;
+    text-overflow:  ellipsis;
+    border-bottom:  none;
+}
+
+#table-of-contents a:hover {
+    /* text-decoration:  underline; */
+    border-bottom: 2px rgba(51,102,204,1.0)  dotted;
+    font-weight:  bold;
+}
+
+#table-of-contents a:active{
+    font-weight: bold;
+}
+
+#table-of-contents .tag{
+    display: none;
 }
     
 h1 {
@@ -99,10 +142,11 @@ a {
     transition:         none 86ms ease-out;
 }
 
-a {
-    background-color:             transparent;
-    -webkit-text-decoration-skip: objects;
+a:hover {
+    /* text-decoration: underline; */
+    border-bottom: 2px var(--linkcolor) dotted;
 }
+
 
 
 .tag {
@@ -142,37 +186,6 @@ li {
     padding-top:   4px;
     font-size:    14px;
 }
-
-
-
-#table-of-contents ul {
-    padding-left: 0px;
-    padding-top:  5px;
-    padding-bottom: 10px;
-    list-style-type:     none;
-    list-style-position: inside;
-}
-
-#table-of-contents li {
-    padding-left: 10px;
-    padding-top:   4px;
-    font-size:    14px;
-}
-
-#table-of-contents  a {
-    /* color:          rgba(0,0,0,1); */
-    /* font-weight:    700; */
-    color:            #383838; /* rgb(11, 83, 149); */
-    position:       relative;
-    text-overflow:  ellipsis;
-    border-bottom:  none;
-}
-
-#table-of-contents a:hover {
-    color:            rgba(51,102,204,1.0);
-    text-decoration:  underline;
-}
-
 
 
 
@@ -234,10 +247,7 @@ li {
         margin-left: 0;
         margin-right: 0;
         padding-bottom: 20px;
-        padding-left: -10px;
-        
-        background-color: var(--toc-bgcolor);
-        color: var(--header-color);    
+        padding-left: -10px;      
         
         float: left;
         position: fixed;
@@ -472,7 +482,6 @@ li {
         
         /* float:     bottom; */
         position:  absolute;
-
         display:   block;
 
         /* padding-bottom:60px; */
@@ -507,10 +516,7 @@ li {
         height: 50px;
         width:  100%;        
         overflow-y: hidden;
-        
-        background-color: var(--toc-bgcolor);
-        color: var(--header-color);    
-        
+
         float: left;
         position: fixed;
 
@@ -704,10 +710,7 @@ li {
 */
 @media only screen and (min-width: 961px) {
 
-    html {
-        background-color: #262c33;
-    }
-    
+   
     body {
 
         position:  absolute;
@@ -726,7 +729,7 @@ li {
         padding-left:    20px;
         padding-right:   50px;
         /* overflow-x:       scroll; */
-        background-color:  var(--bodyBgColor); /* rgba(255,255,255,1.0); */
+      
         /* z-index:          9999; */
     }
 
@@ -737,9 +740,7 @@ li {
         width:  var(--toc-width);        
         height: 100%;
         overflow-y: scroll;
-        
-        background-color: var(--toc-bgcolor);
-        color: var(--header-color);    
+
         
         float: left;
         position: fixed;
