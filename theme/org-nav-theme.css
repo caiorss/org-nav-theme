@@ -98,10 +98,14 @@ body{
 }
 
 #table-of-contents a:hover {
-    color:            rgba(51,102,204,1.0);
-    text-decoration:  underline;
+    /* text-decoration:  underline; */
+    border-bottom: 2px rgba(51,102,204,1.0)  dotted;
+    font-weight:  bold;
 }
 
+#table-of-contents a:active{
+    font-weight: bold;
+}
     
 h1 {
 
