@@ -16,15 +16,11 @@
 /** Variables */
 
 :root {
-
-    /** ====== Table of contents settings ===== */
-
-    --toc-width:    270px;        
+    /** =================== Table of contents settings ===== */
+    --toc-width:    300px;        
     --toc-bgcolor:  #D8D8D8;
 
-
-    /** ====== Body Settings =================== */
-    
+    /** ====================== Body Settings =================== */   
     /** Content length */
     --main-width:    800px;
     --header-color:  #1572AE;
