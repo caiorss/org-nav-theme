@@ -106,6 +106,10 @@ body{
 #table-of-contents a:active{
     font-weight: bold;
 }
+
+#table-of-contents .tag{
+    display: none;
+}
     
 h1 {
 
