@@ -18,7 +18,8 @@
 :root {
     /** =================== Table of contents settings ===== */
     --toc-width:    300px;        
-    --toc-bgcolor:  #D8D8D8;
+    --toc-bgcolor:  #202020;
+    --toc-fgcolor:  white;
 
     /** ====================== Body Settings =================== */   
     /** Content length */
@@ -60,10 +61,9 @@ body{
     
 }
 
-
 #table-of-contents{        
    background-color: var(--toc-bgcolor);
-   color: var(--header-color);        
+   color: var(--toc-fgcolor);        
 }
 
 #table-of-contents ul {
@@ -84,7 +84,7 @@ body{
 #table-of-contents  a {
     /* color:          rgba(0,0,0,1); */
     /* font-weight:    700; */
-    color:            #383838; /* rgb(11, 83, 149); */
+    color:          white; /* rgb(11, 83, 149); */
     position:       relative;
     text-overflow:  ellipsis;
     border-bottom:  none;
@@ -144,18 +144,11 @@ a:hover {
     border-bottom: 2px var(--linkcolor) dotted;
 }
 
-
-
 .tag {
     background-color: #0e0707;
 }
 
-
-
 /* ======== Paragraph formatting =================== */
-
-
-
 
 /** Align table caption to the left. */
 caption {
@@ -184,7 +177,11 @@ li {
     font-size:    14px;
 }
 
+/* ====  Mathjax Latex  === */
 
+.MathJax_MathML {
+    font-size: "140%";
+}
 
 /* ------------------------------------- 
    -         Mobile Styles             -
@@ -357,7 +354,6 @@ li {
        white-space: -o-pre-wrap; /* Opera 7 */    
        word-wrap: break-word; /* Internet Explorer 5.5+ */
    }
-
     
    /* Mobile screen table */
     table {
@@ -457,7 +453,6 @@ li {
 
     
 }
-
 
 /* ------------------------------------- 
    -         Tablet Styles             -
@@ -700,7 +695,6 @@ li {
 
 }
 
-
 /* ------------------------------------- 
    -         Desktop Styles            -
    -------------------------------------
@@ -897,9 +891,7 @@ li {
 
 } /*----- End of desktop specific design ---*/
 
-
 /* ======= Code block style ======================= */
-
 
 code {
     /* background-color: #dbdfe0; */
@@ -913,7 +905,6 @@ code {
 }
 
 /* ======== Code block Syntax Highlight ======================= */
-
 
 
 pre span.org-builtin                     {color:#006FE0;font-weight:bold;}
